@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio|Pierrick VIRET</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio|Pierrick VIRET</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-    <header>
-        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-            <div class="bg-dark p-4">
-              <h5 class="text-body-emphasis h4">Pierrick VIRET | web et mobile Développeur</h5>
-              <span class="text-body-secondary">Acceuil</span>
-              <span class="text-body-secondary">Projets</span>
-              <span class="text-body-secondary">Compétences</span>
-              <span class="text-body-secondary">A Propos</span>
-            </div>
-          </div>
-          <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-          </nav>
-    </header>
-    <main>
-        <div>
-            <h5>PIERRICK VIRET</h5>
-            <h1>Développeur Mobile & Web Front-End</h1>
-            <h3>
-                Développeur iOS expérimenté en formation développement web front-end. Mon parcours de 19 ans dans la Marine Nationale m'a doté d'une rigueur exceptionnelle que j'applique désormais à la création d'interfaces utilisateur mobiles et web performantes.
-            </h3>
-            <h4>Mes Projets ou A Propos De Moi</h4>
+  <header>
+    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="light">
+      <div class="bg-light p-4">
+        <h5 class="text-body-emphasis h4">Pierrick VIRET | web et mobile Développeur</h5>
+        <span class="text-body-secondary">Acceuil</span>
+        <span class="text-body-secondary">Projets</span>
+        <span class="text-body-secondary">Compétences</span>
+        <span class="text-body-secondary">A Propos</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid align-items-center">
+        <button class="navbar-toggler align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    
+      <section id="Description" class="row align-items-end justify-content-end vh-100">
+        <div class="col-lg-6 me-5 order-1">
+          <img src="/assets/photos/img_profile.png" alt="Portrait de Pierrick Viret" class="img-fluid portrait-img">
         </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+        <div class="col-lg-5 mb-5 mb-lg-0 z-index-1 texte_relative texte-align-right">
+          <h4 class="text-uppercase letter-spacing-2 name">Pierrick VIRET</h4>
+          <h1 class="display-3 fw-bold">Développeur Web et mobile</h1>
+          <p class="lead mb-2">
+            Développeur iOS expérimenté en formation développement web front-end. 
+            Mon parcours de 19 ans dans la Marine Nationale m'a doté d'une rigueur 
+            exceptionnelle que j'applique désormais à la création d'interfaces 
+            utilisateur mobiles et web performantes.
+          </p>
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <a href="#projects" class="btn btn-dark px-4 py-2 fw-medium">Voir mes projets</a>
+            <span class="mx-2 text-muted">ou</span>
+            <a href="#about" class="btn btn-outline-dark px-4 py-2 fw-medium">À propos de moi</a>
+          </div>
+        </div>
+      </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>
