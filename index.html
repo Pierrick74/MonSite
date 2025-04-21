@@ -24,11 +24,11 @@
             Pierrick VIRET | web et mobile Développeur
           </h5>
           <div class="row align-items-center justify-content-end">
-            <span class="text-body-secondary text-center fs-1 fw-bold"
-              >Acceuil</span
+            <a class="text-body-secondary text-center fs-1 fw-bold" href="#Description"
+              >Acceuil</a
             >
-            <span class="text-body-secondary text-center fs-1 fw-bold"
-              >Projets</span
+            <a class="text-body-secondary text-center fs-1 fw-bold" href="#projects"
+              >Projets</a
             >
             <span class="text-body-secondary text-center fs-1 fw-bold"
               >Compétences</span
@@ -58,7 +58,7 @@
     <main>
       <section
         id="Description"
-        class="row align-items-end justify-content-end mt-3"
+        class="row align-items-end justify-content-end my-5"
       >
         <div class="col-12 col-lg-6 me-lg-5 order-lg-1">
           <div class="bg"></div>
@@ -74,27 +74,53 @@
           </p>
           <div class="d-flex flex-wrap align-items-center gap-3">
             <a href="#projects" class="btn btn-dark px-4 py-2 fw-medium"
-              >Voir mes projets</a
-            >
+              >Voir mes projets</a>
             <span class="mx-2 text-muted">ou</span>
             <a href="#about" class="btn btn-outline-dark px-4 py-2 fw-medium"
-              >À propos de moi</a
-            >
+              >À propos de moi</a>
           </div>
         </div>
       </section>
-      <section class="my-5 mh container-fluid vh-100">
-        <h2 class="display-5 fw-bold mx-3">Projects Personnels</h2>
-        <ul>
-          <li class="col-11">
-            <div class="card text-bg-dark col-12 col-lg-3 vh-95">
-              <img src="/assets/img-black.png" class="card-img" alt="..." ; />
-              <div class="card-img-overlay">
-                <span class="row justify-content-between">
-                  <h5 class="card-title col-8">Site internet</h5>
-                  <p class="card-text col-4 text-end"><small>New</small></p>
-                </span>
-                <p class="card-text">création de ce site en HTML5/CSS3.</p>
+      <section id="projects" class="my-5 mh container-fluid vh-100">
+        <h2 class="display-5 fw-bold m-5">Projects Personnels</h2>
+        <ul class="list-unstyled m-lg-5 row justify-content-center justify-content-lg-between mx-0 align-items-center">
+          <li class="col-10 col-lg-3 p-0 m-2 bg-dark rounded">
+            <div class="card shadowCard">
+              <div class="card-body bg-dark text-white">
+                <h5 class="card-title">Site internet</h5>
+                <h6 class="card-subtitle mb-2 text-secondary">New</h6>
+                <p class="card-text">Portefolio: Création de ce site en HTML5/CSS3.</p>
+                <img src="/assets/photos/site.png" class="card-img" alt="Image du site" ; />
+                <div class="d-flex justify-content-end">
+                  <a href="#" ><img class="chevron rounded-circles" src="assets/photos/chevron.png" alt=""></a>
+              </div>
+              </div>
+            </div>
+          </li>
+          <li class="col-10 col-lg-3 p-0 m-2 bg-dark rounded">
+            <div class="card shadowCard">
+              <div class="card-body bg-dark text-white">
+                <h5 class="card-title">Application Mobile</h5>
+                <h6 class="card-subtitle mb-2 text-secondary">JAN 2025</h6>
+                <p class="card-text">MarmotMonitor: gestion des premiers jours d'un enfant</p>
+                <img src="/assets/photos/marmotmonitor.png" class="card-img" alt="Image de MarmotMonitor" ; />
+                <div class="d-flex justify-content-end">
+                  <a href="#" ><img class="chevron rounded-circles" src="assets/photos/chevron.png" alt=""></a>
+              </div>
+              </div>
+              
+            </div>
+          </li>
+          <li class="col-10 col-lg-3 p-0 m-2 bg-dark rounded">
+            <div class="card shadowCard">
+              <div class="card-body bg-dark text-white">
+                <h5 class="card-title">Application Mobile</h5>
+                <h6 class="card-subtitle mb-2 text-secondary">2023</h6>
+                <p class="card-text">Reciplease: application de recette de cuisine</p>
+                <img src="/assets/photos/reciplease.png" class="card-img" alt="Image de Reciplease" ; />
+                <div class="d-flex justify-content-end">
+                    <a href="#" ><img class="chevron rounded-circles" src="assets/photos/chevron.png" alt=""></a>
+                </div>
               </div>
             </div>
           </li>
