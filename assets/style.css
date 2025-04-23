@@ -41,3 +41,19 @@ position: relative;
   border-style: solid;
   border-color: rgb(0, 0, 0);
 }
+
+.icone {
+  border-width: 2px;
+  border-style: solid;
+  border-radius:30px !important;
+}
+
+.icone:hover {
+  background-color: blue;
+  color: white;
+}
+
+.techno_icone {
+  width: 100px;
+  height: 100px;
+}
