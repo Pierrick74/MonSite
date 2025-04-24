@@ -11,6 +11,7 @@ position: relative;
 .img_profile {
   max-height: 88vh;
 }
+
 .bg{
   background: linear-gradient(to bottom, transparent 60%, rgb(255, 255, 255)),url("/assets/photos/img_profile.png");
   background-size: 90%;
@@ -25,7 +26,7 @@ position: relative;
 }
 
 .shadowCard:hover {
-  box-shadow: rgb(42, 42, 42) 2px 2px 20px;
+  box-shadow: rgb(42, 42, 42) 3px 3px 30px;
   transition: all 0.3s ease-in-out;
 }
 
