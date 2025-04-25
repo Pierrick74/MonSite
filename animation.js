@@ -4,5 +4,5 @@ document.addEventListener('DOMContentLoaded', function() {
       elements.forEach(function(element) {
         element.classList.add('animate');
       });
-    }, 300);
+    }, 500);
   });
