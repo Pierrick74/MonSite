@@ -1,4 +1,9 @@
-#Description h4, #Description p {
+body{
+  background: #FAFAFD;
+  font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#Description h4, #Description p, h5 {
   color: gray;
 }
 
@@ -58,4 +63,43 @@ position: relative;
 .techno_icone {
   width: 50px;
   height: 50px;
+}
+
+.name {
+  letter-spacing: 0.2rem;
+}
+
+h3 em {
+  color: #007bff;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+/* Définition de la couleur bleue Apple */
+:root {
+  --apple-blue: #0071e3; /* Bleu Apple classique */
+  --apple-blue-light: rgba(0, 113, 227, 0.7); /* Version plus légère pour un effet subtil */
+}
+
+/* Style pour la barre de soulignement */
+.title-underline {
+  position: relative;
+  display: inline-block; /* Pour que la barre ne prenne que la largeur du texte */
+}
+
+.title-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0px; /* Distance sous le texte */
+  left: 0;
+  width: 0; /* Commence à 0 pour l'animation */
+  height: 3px; /* Épaisseur de la barre */
+  background-color: var(--apple-blue);
+  transition: width 1.2s ease-out; /* Transition pour l'animation */
+  opacity: 0.7; /* Légère transparence pour plus de subtilité */
+}
+
+/* Classe qui sera ajoutée via JavaScript au chargement de la page */
+.title-underline.animate::after {
+  width: 100%; /* Longueur finale de la barre - ajustez selon vos préférences */
 }
