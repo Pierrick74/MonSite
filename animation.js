@@ -6,3 +6,28 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }, 500);
   });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    // Utiliser IntersectionObserver pour détecter quand les éléments entrent dans le viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // Si l'élément est visible dans le viewport
+        if (entry.isIntersecting) {
+          // Ajouter la classe pour déclencher l'animation
+          entry.target.classList.add('visible');
+          // Cesser d'observer après l'animation
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      // Options ajustées
+      root: null, // Viewport
+      threshold: 0.25, // Déclenche quand 25% de l'élément est visible (augmentez cette valeur)
+      rootMargin: '-100px 0px' // Ajoute une marge négative en haut pour retarder le déclenchement
+    });
+    
+    // Observer tous les éléments de la timeline
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      observer.observe(item);
+    });
+  });

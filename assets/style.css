@@ -7,6 +7,7 @@ body{
   color: gray;
 }
 
+/* photo avec degradé  */
 .bg{
   background: linear-gradient(to bottom, transparent 60%, #FAFAFD),url("/assets/photos/img_profile.png");
   background-size: 90%;
@@ -16,19 +17,10 @@ body{
   max-height: 90vh;
 }
 
-.shadowCard{
-  max-width: 100%;
-}
-
-.shadowCard:hover {
-  scale: 1.05;
-  transition: all 0.3s ease-in-out;
-}
-
-
+/* Style pour le conteneur de la carte */
 .card-title {
   font-weight: 600;
-  letter-spacing: -0.5px; /* Style Apple */
+  letter-spacing: -0.5px;
 }
 
 .card-text {
@@ -56,31 +48,31 @@ h3 em {
 
 /* Définition de la couleur bleue Apple */
 :root {
-  --apple-blue: #0071e3; /* Bleu Apple classique */
-  --apple-blue-light: rgba(0, 113, 227, 0.7); /* Version plus légère pour un effet subtil */
+  --apple-blue: #0071e3; 
+  --apple-blue-light: rgba(0, 113, 227, 0.7); 
 }
 
 /* Style pour la barre de soulignement */
 .title-underline {
   position: relative;
-  display: inline-block; /* Pour que la barre ne prenne que la largeur du texte */
+  display: inline-block;
 }
 
 .title-underline::after {
   content: '';
   position: absolute;
-  bottom: 0px; /* Distance sous le texte */
+  bottom: 0px; 
   left: 0;
-  width: 0; /* Commence à 0 pour l'animation */
-  height: 3px; /* Épaisseur de la barre */
+  width: 0; 
+  height: 3px; 
   background-color: var(--apple-blue);
-  transition: width 1.2s ease-out; /* Transition pour l'animation */
-  opacity: 0.7; /* Légère transparence pour plus de subtilité */
+  transition: width 1.2s ease-out; 
+  opacity: 0.7; 
 }
 
 /* Classe qui sera ajoutée via JavaScript au chargement de la page */
 .title-underline.animate::after {
-  width: 100%; /* Longueur finale de la barre - ajustez selon vos préférences */
+  width: 100%; /* Longueur finale de la barre */
 }
 
 /* ---------gestion de l'overlay------------- */
@@ -159,4 +151,109 @@ h3 em {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Container de la timeline */
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Liste de la timeline */
+.timeline-list {
+  list-style: none;
+  padding-left: 60px; 
+  position: relative;
+}
+
+/* Ligne verticale principale */
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px; 
+  width: 2px; 
+  background: linear-gradient(to bottom, #e6e6e6 85%, transparent 100%);
+}
+
+/* Items de la timeline */
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px; /* Espacement entre les items */
+  padding-bottom: 20px;
+}
+
+/* Marqueurs (cercles) sur la ligne */
+.timeline-marker {
+  position: absolute;
+  left: -52px; /* Position par rapport au padding-left du parent */
+  top: 5px; /* Alignement vertical avec le titre */
+  width: 16px; /* Taille du cercle */
+  height: 16px;
+  border-radius: 50%;
+  background-color: #333; /* Même couleur que vos boutons sombres */
+  z-index: 1; /* Au-dessus de la ligne */
+}
+
+/* Style pour le contenu de chaque item */
+.timeline-content {
+  background-color: #f8f8f8;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Style pour l'année/date */
+.timeline-date {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #666;
+}
+
+/* Titre de l'expérience */
+.timeline-title {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition-delay: 0.1s;
+}
+
+/* Sous-titre (entreprise/école) */
+.timeline-subtitle {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 15px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition-delay: 0.2s;
+}
+
+.timeline-tags .badge {
+  margin-right: 5px;
+  padding: 6px 12px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition-delay: 0.4s;
+}
+.timeline-description {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition-delay: 0.3s;
+}
+
+/* Animation activée */
+.timeline-item.visible .timeline-title,
+.timeline-item.visible .timeline-subtitle,
+.timeline-item.visible .timeline-description,
+.timeline-item.visible .timeline-tags {
+  transform: translateY(0);
+  opacity: 1;
 }
