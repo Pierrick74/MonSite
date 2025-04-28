@@ -257,3 +257,9 @@ h3 em {
   transform: translateY(0);
   opacity: 1;
 }
+
+.mail_icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
