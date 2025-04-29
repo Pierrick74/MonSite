@@ -40,6 +40,11 @@ body{
   height: auto;
 }
 
+.appstore_icone {
+  width: 50%;
+  height: auto;
+}
+
 h3 em {
   color: #0071e3;
   font-style: italic;
@@ -256,4 +261,24 @@ h3 em {
 .timeline-item.visible .timeline-tags {
   transform: translateY(0);
   opacity: 1;
+}
+
+.mail_icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+@media (min-width: 1600px) {
+  .overlay-title {
+    font-size: 2.5rem;
+  }
+
+  .overlay-text {
+    font-size: 1.5rem;
+  }
+
+  .overlay-features li {
+    font-size: 1.2rem;
+  }
 }
