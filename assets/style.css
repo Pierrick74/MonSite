@@ -9,7 +9,7 @@ body{
 
 /* photo avec degradé  */
 .bg{
-  background: linear-gradient(to bottom, transparent 60%, #FAFAFD),url("/assets/photos/img_profile.png");
+  background: linear-gradient(to bottom, transparent 60%, #FAFAFD),url("/assets/photos/img_profile.webp");
   background-size: 90%;
   background-repeat: no-repeat;
   aspect-ratio: 1/1;
@@ -41,8 +41,7 @@ body{
 }
 
 .appstore_icone {
-  width: 50%;
-  height: auto;
+  height: 40px;
 }
 
 h3 em {
