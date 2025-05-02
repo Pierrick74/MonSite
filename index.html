@@ -14,16 +14,16 @@
   👋 Si vous inspectez mon code, c'est que vous êtes attentif aux détails.
   💼 Je recherche actuellement de nouvelles opportunités professionnelles.
   🚀 Discutons de projets passionnants ou d'opportunités de collaboration !
-    📧 Contactez-moi: a toi de trouver l'email.
+  📧 Contactez-moi: a toi de trouver l'email.
   spoiler alert: il est dans le footer
   
   {
-    "skills": ["HTML5", "CSS/Bootstrap", "JavaScript", "Responsive Design"],
-    "looking_for": "Alternance ou emploi",
-    "location": "Annecy, France",
-    "available_from": "Immédiatement"
+  "skills": ["HTML5", "CSS/Bootstrap", "JavaScript", "Responsive Design"],
+  "looking_for": "Alternance ou emploi",
+  "location": "Annecy, France",
+  "available_from": "Immédiatement"
   }
--->
+  -->
   <header>
     <div
     class="collapse"
@@ -31,14 +31,19 @@
     data-bs-theme="dark"
     >
     <div class="bg-dark p-4">
-      <h5 class="text-body-emphasis h5">
-        Pierrick VIRET | web et mobile Développeur
+      <div class="d-flex flex-wrap justify-content-center">
+      <h5 class="text-body-emphasis h5 mx-2">
+        Pierrick VIRET
       </h5>
+      <h5 class="text-body-secondary h5">
+        Développeur Web et mobile
+      </h5>
+    </div>
       <div class="row align-items-center justify-content-end">
-        <a class="text-body-secondary text-center fs-1 fw-bold" href="#Description">Accueil</a>
-        <a class="text-body-secondary text-center fs-1 fw-bold" href="#projects">Projets</a>
-        <a class="text-body-secondary text-center fs-1 fw-bold" href="#Competences">Compétences</a>
-        <a class="text-body-secondary text-center fs-1 fw-bold" href="#Contact">Contact</a>
+        <a class="text-body-secondary text-center fs-1 my-2 fw-bold text-decoration-none" href="#Description">Accueil</a>
+        <a class="text-body-secondary text-center fs-1 my-2 fw-bold text-decoration-none" href="#projects">Projets</a>
+        <a class="text-body-secondary text-center fs-1 my-2 fw-bold text-decoration-none" href="#Competences">Compétences</a>
+        <a class="text-body-secondary text-center fs-1 my-2 fw-bold text-decoration-none" href="#Contact">Contact</a>
       </div>
     </div>
   </div>
@@ -59,11 +64,11 @@
 </nav>
 </header>
 <main>
-  <section id="Description" class="row align-items-end justify-content-end mb-5">
-    <div class="col-12 col-lg-6 me-lg-5 order-lg-1">
+  <section id="Description" class="row align-items-end justify-content-end min-vh-95">
+    <div class="col-12 col-lg-6 order-lg-1">
       <div class="bg"></div>
     </div>
-    <div class="col-lg-5 mb-5 mb-lg-0 px-4 texte-align-right">
+    <div class="col-lg-6 mb-5 mb-lg-0 px-5 texte-align-right">
       <h5 class="text-uppercase letter-spacing-2 name">Pierrick VIRET</h5>
       <h1 class="display-3 fw-bold">Développeur Web et mobile</h1>
       <p class="lead mb-5">
@@ -72,218 +77,213 @@
         exceptionnelle que j'applique désormais à la création d'interfaces
         utilisateur mobiles et web performantes.
       </p>
-      <h3 class="w-100 lh-lg"> <span class="title-underline">Faites décoller votre projet !</span> → 
-        <a class="btn btn-outline-dark px-4 py-2 fw-medium" href="#Contact">Me contacter </a></h3> 
-        
+      <div class="d-flex flex-wrap">
+        <h3 class="col-12 col-md-6 col-lg-12 col-xl-8"> Faites décoller votre projet&nbsp;!&nbsp;→</h3> 
+        <a class="btn btn-outline-dark fw-medium col-12 col-md-5 col-xl-4" href="#Contact">Me contacter</a>
       </div>
-    </section>
-    <section id="projects" class="mh container-fluid min-vh-80">
-      <h2 class="display-5 fw-bold m-5 pt-5">Projects Personnels</h2>
-      <ul class="list-unstyled m-lg-5 row justify-content-center justify-content-lg-between mx-0">
-        <li class="col-10 col-md-5 col-lg-3 p-0 m-2 bg-dark rounded card project-card">
-          <div class="card-body bg-dark text-white rounded">
-            <div class="card-header-content mb-2">
-              <h5 class="card-title">Site internet</h5>
-              <h6 class="card-subtitle mb-1 text-secondary">New</h6>
-            </div>
-            <p class="card-text">Portefolio: Création de ce site en HTML5/CSS3.</p>
-            <div class="project-image-container mb-3 mt-auto">
-              <img src="/assets/photos/site.webp" class="card-img" alt="Image du site">
-            </div>
-            <div class="d-flex justify-content-around">
-              <img class="rounded techno_icone" src="assets/photos/icone/icone_html.webp" alt="">
-              <img class="rounded techno_icone" src="assets/photos/icone/icone_css.webp" alt="">
-              <img class="rounded techno_icone" src="assets/photos/icone/icone_boostrap.webp" alt="">
-            </div>
+    </div>
+  </section>
+  <section id="projects" class="w-100 align-items-center justify-content-center">
+    <h2 class="display-5 fw-bold px-5 pt-5">Projects Personnels</h2>
+    <ul class="list-unstyled m-lg-5 row justify-content-center justify-content-lg-between mx-0">
+      <li class="col-10 col-md-5 col-lg-3 p-0 m-2 bg-dark rounded card project-card">
+        <div class="card-body bg-dark text-white rounded">
+          <div class="card-header-content mb-2">
+            <h5 class="card-title">Site internet</h5>
+            <h6 class="card-subtitle mb-1 text-secondary">New</h6>
           </div>
-          
-          <!-- Overlay de résumé au survol -->
-          <div class="card-overlay">
-            <h3 class="overlay-title">Portfolio Personnel</h3>
-            <p class="overlay-text">
-              Portfolio conçu avec un design minimaliste inspiré d'Apple pour présenter mes projets et compétences en développement web.
+          <p class="card-text">Portefolio: Création de ce site en HTML5/CSS3.</p>
+          <div class="project-image-container mb-3 mt-auto">
+            <img src="/assets/photos/site.webp" class="card-img" alt="Image du site">
+          </div>
+          <div class="d-flex justify-content-around">
+            <img class="rounded techno_icone" src="assets/photos/icone/icone_html.webp" alt="">
+            <img class="rounded techno_icone" src="assets/photos/icone/icone_css.webp" alt="">
+            <img class="rounded techno_icone" src="assets/photos/icone/icone_boostrap.webp" alt="">
+          </div>
+        </div>
+        
+        <!-- Overlay de résumé au survol -->
+        <div class="card-overlay">
+          <h3 class="overlay-title">Portfolio Personnel</h3>
+          <p class="overlay-text">
+            Portfolio conçu avec un design minimaliste inspiré d'Apple pour présenter mes projets et compétences en développement web.
+          </p>
+          <ul class="overlay-features">
+            <li>Responsive design (Bootstrap 5)</li>
+            <li>Interface utilisateur épurée et intuitive</li>
+            <li>Animations CSS pour une meilleure expérience</li>
+            <li>Structure sémantique SEO-friendly</li>
+          </ul>
+        </div>
+      </li>
+      <li class="col-10 col-md-5 col-lg-3 p-0 m-2 bg-dark rounded card project-card">
+        <div class="card-body bg-dark text-white rounded">
+          <h5 class="card-title">Application Mobile</h5>
+          <h6 class="card-subtitle mb-2 text-secondary">JAN 2025</h6>
+          <p class="card-text">
+            MarmotMonitor: gestion des premiers jours d'un enfant
+          </p>
+          <div class="project-image-container mb-3 mt-auto">
+            <img src="/assets/photos/marmotMonitorApp.webp" class="card-img" alt="Image de MarmotMonitor">
+          </div>
+          <div class="d-flex justify-content-around align-items-center">
+            <img class="rounded techno_icone" src="assets/photos/icone/icone_swiftui.webp" alt="SwiftUI icon">
+            <img class="appstore_icone rounded" src="assets/photos/appstore.webp" alt="Swift icon">
+          </div>
+        </div>
+        
+        <!-- Overlay de résumé au survol -->
+        <div class="card-overlay">
+          <h3 class="overlay-title">MarmotMonitor</h3>
+          <p class="overlay-text">
+            Application iOS pour aider les nouveaux parents à suivre et gérer les soins quotidiens de leur nouveau-né.
+          </p>
+          <ul class="overlay-features">
+            <li>Suivi des repas, du sommeil et des changes</li>
+            <li>Graphiques d'évolution du poids et de la taille</li>
+            <li>Tableau de bord journalier avec synthèse des activités</li>
+            <li>Interface intuitive et adaptée à l'usage quotidien</li>
+          </ul>
+        </div>
+      </li>
+      <li class="col-10 col-md-5 col-lg-3 p-0 m-2 bg-dark rounded card project-card">
+        <div class="card-body bg-dark text-white rounded">
+          <h5 class="card-title">Application Mobile</h5>
+          <h6 class="card-subtitle mb-2 text-secondary">2023</h6>
+          <p class="card-text">Reciplease: application de recette de cuisine</p>
+          <div class="project-image-container mb-3 mt-auto">
+            <img src="/assets/photos/reciplease.webp" class="card-img" alt="Image de Reciplease">
+          </div>
+          <div class="d-flex justify-content-around align-items-center">
+            <img class="rounded techno_icone" src="assets/photos/icone/icone_swift.webp" alt="Swift icon">
+          </div>
+        </div>
+        
+        <!-- Overlay de résumé au survol -->
+        <div class="card-overlay">
+          <h3 class="overlay-title">Reciplease</h3>
+          <p class="overlay-text">
+            Application iOS permettant de découvrir des recettes de cuisine en fonction des ingrédients disponibles dans votre réfrigérateur.
+          </p>
+          <ul class="overlay-features">
+            <li>Recherche de recettes par ingrédients</li>
+            <li>Filtres diététiques (végétarien, sans gluten, etc.)</li>
+            <li>Sauvegarde des recettes favorites</li>
+            <li>Interface élégante avec photos haute résolution</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section id="Competences" class="px-5 w-100">
+    <h2 class="display-5 fw-bold pb-5">Compétences</h2>
+    <div class="row w-100 justify-content-lg-between justify-content-center">
+      <div class="text-left-center col-12 col-lg-3 col-sm-5 mx-1 my-2">
+        <h5 class="text-uppercase letter-spacing-2 fw-light name">Web</h5>
+        <h3>HTML5<em> / </em>
+          CSS3<em> / </em>
+          JavaScript<em> / </em>
+          Bootstrap
+        </h3>
+      </div>  
+      <div class="text-left-center col-12 col-lg-3 col-sm-5 mx-1 my-2">
+        <h5 class="text-uppercase letter-spacing-8 fw-light name">Mobile</h5>
+        <h3>Swift<em> / </em>
+          SwiftUI<em> / </em>
+          Flutter
+        </h3>
+      </div>
+      <div class="text-left-center col-12 col-lg-3 col-sm-5 mx-1 my-2">
+        <h5 class="text-uppercase letter-spacing-5 fw-light name">Outils</h5>
+        <h3>VSCode<em> / </em>
+          XCode<em> / </em>
+          Git<em> / </em>
+          Github
+        </h3>
+      </div>
+    </div>
+  </section>
+  <section id="parcours" class="w-100">
+    <h2 class="display-5 fw-bold m-5 pt-5">Parcours Professionnel</h2>
+    
+    <div class="timeline-container">
+      <ul class="timeline-list">
+        <!-- Développement Web -->
+        <li class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content border border-1 border-dark rounded">
+            <div class="timeline-date">2024 - Présent</div>
+            <h3 class="timeline-title">Développeur Web Full Stack</h3>
+            <p class="timeline-subtitle">Campus Numérique in the Alps</p>
+            <p class="timeline-description">
+              Formation et développement de compétences en HTML5, CSS3, JavaScript et PHP. 
             </p>
-            <ul class="overlay-features">
-              <li>Responsive design (Bootstrap 5)</li>
-              <li>Interface utilisateur épurée et intuitive</li>
-              <li>Animations CSS pour une meilleure expérience</li>
-              <li>Structure sémantique SEO-friendly</li>
-            </ul>
+            <div class="mt-2">
+              <span class="badge bg-dark">HTML5</span>
+              <span class="badge bg-dark">CSS3</span>
+              <span class="badge bg-dark">JavaScript</span>
+              <span class="badge bg-dark">Bootstrap</span>
+            </div>
           </div>
         </li>
-        <li class="col-10 col-md-5 col-lg-3 p-0 m-2 bg-dark rounded card project-card">
-          <div class="card-body bg-dark text-white rounded">
-            <h5 class="card-title">Application Mobile</h5>
-            <h6 class="card-subtitle mb-2 text-secondary">JAN 2025</h6>
-            <p class="card-text">
-              MarmotMonitor: gestion des premiers jours d'un enfant
+        
+        <!-- Développement iOS -->
+        <li class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content  border border-1 border-dark rounded">
+            <div class="timeline-date">2023 - 2024</div>
+            <h3 class="timeline-title">Développeur iOS</h3>
+            <p class="timeline-subtitle">OpenClassrooms</p>
+            <p class="timeline-description">
+              Formation et développement d'applications mobiles natives pour iOS en utilisant Swift et SwiftUI.
+              Réalisation de projets concrets comme MarmotMonitor et Reciplease.
             </p>
-            <div class="project-image-container mb-3 mt-auto">
-              <img src="/assets/photos/marmotMonitorApp.webp" class="card-img" alt="Image de MarmotMonitor">
+            <div class="mt-2">
+              <span class="badge bg-dark">Swift</span>
+              <span class="badge bg-dark">SwiftUI</span>
+              <span class="badge bg-dark">iOS</span>
             </div>
-            <div class="d-flex justify-content-around align-items-center">
-              <img class="rounded techno_icone" src="assets/photos/icone/icone_swiftui.webp" alt="SwiftUI icon">
-              <img class="appstore_icone rounded" src="assets/photos/appstore.webp" alt="Swift icon">
-            </div>
-          </div>
-          
-          <!-- Overlay de résumé au survol -->
-          <div class="card-overlay">
-            <h3 class="overlay-title">MarmotMonitor</h3>
-            <p class="overlay-text">
-              Application iOS pour aider les nouveaux parents à suivre et gérer les soins quotidiens de leur nouveau-né.
-            </p>
-            <ul class="overlay-features">
-              <li>Suivi des repas, du sommeil et des changes</li>
-              <li>Graphiques d'évolution du poids et de la taille</li>
-              <li>Tableau de bord journalier avec synthèse des activités</li>
-              <li>Interface intuitive et adaptée à l'usage quotidien</li>
-            </ul>
           </div>
         </li>
-        <li class="col-10 col-md-5 col-lg-3 p-0 m-2 bg-dark rounded card project-card">
-          <div class="card-body bg-dark text-white rounded">
-            <h5 class="card-title">Application Mobile</h5>
-            <h6 class="card-subtitle mb-2 text-secondary">2023</h6>
-            <p class="card-text">Reciplease: application de recette de cuisine</p>
-            <div class="project-image-container mb-3 mt-auto">
-              <img src="/assets/photos/reciplease.webp" class="card-img" alt="Image de Reciplease">
-            </div>
-            <div class="d-flex justify-content-around align-items-center">
-              <img class="rounded techno_icone" src="assets/photos/icone/icone_swift.webp" alt="Swift icon">
-            </div>
-          </div>
-          
-          <!-- Overlay de résumé au survol -->
-          <div class="card-overlay">
-            <h3 class="overlay-title">Reciplease</h3>
-            <p class="overlay-text">
-              Application iOS permettant de découvrir des recettes de cuisine en fonction des ingrédients disponibles dans votre réfrigérateur.
+        
+        <!-- Marine Nationale -->
+        <li class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content  border border-1 border-dark rounded">
+            <div class="timeline-date">2005 - 2024</div>
+            <h3 class="timeline-title">Marine Nationale</h3>
+            <p class="timeline-subtitle">Opérateur embarqué</p>
+            <p class="timeline-description">
+              19 ans de service au sein de la Marine Nationale française. Acquisition de compétences en
+              rigueur, méthode et travail d'équipe. Gestion de projets techniques dans des environnements exigeants.
             </p>
-            <ul class="overlay-features">
-              <li>Recherche de recettes par ingrédients</li>
-              <li>Filtres diététiques (végétarien, sans gluten, etc.)</li>
-              <li>Sauvegarde des recettes favorites</li>
-              <li>Interface élégante avec photos haute résolution</li>
-            </ul>
+            <div class="mt-2">
+              <span class="badge bg-dark">Leadership</span>
+              <span class="badge bg-dark">Gestion de projet</span>
+              <span class="badge bg-dark">Rigueur</span>
+            </div>
           </div>
         </li>
       </ul>
-    </section>
-    <section id="Competences" class="mh m-5 mp-5 container-fluid min-vh-80">
-      <h2 class="display-5 fw-bold pb-5">Compétences</h2>
-      <div class="row w-100 justify-content-lg-between justify-content-center">
-        <div class="text-left-center col-12 col-lg-3 col-sm-5 mx-1 my-2">
-          <h5 class="text-uppercase letter-spacing-2 fw-light name">Web</h5>
-          <h3>HTML5<em> / </em>
-            CSS3<em> / </em>
-            JavaScript<em> / </em>
-            Bootstrap
-          </h3>
-        </div>  
-        <div class="text-left-center col-12 col-lg-3 col-sm-5 mx-1 my-2">
-          <h5 class="text-uppercase letter-spacing-8 fw-light name">Mobile</h5>
-          <h3>Swift<em> / </em>
-            SwiftUI<em> / </em>
-            Flutter
-          </h3>
-        </div>
-        <div class="text-left-center col-12 col-lg-3 col-sm-5 mx-1 my-2">
-          <h5 class="text-uppercase letter-spacing-5 fw-light name">Outils</h5>
-          <h3>VSCode<em> / </em>
-            XCode<em> / </em>
-            Git<em> / </em>
-            Github
-          </h3>
-        </div>
-      </div>
-    </section>
-    <section id="parcours" class="container-fluid min-vh-80 py-5 my-5">
-      <h2 class="display-5 fw-bold m-5 pt-5">Parcours Professionnel</h2>
-      
-      <div class="timeline-container">
-        <ul class="timeline-list">
-          <!-- Développement Web -->
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content border border-1 border-dark rounded">
-              <div class="timeline-date">2024 - Présent</div>
-              <h3 class="timeline-title">Développeur Web Full Stack</h3>
-              <p class="timeline-subtitle">Campus Numérique in the Alps</p>
-              <p class="timeline-description">
-                Formation et développement de compétences en HTML5, CSS3, JavaScript et PHP. 
-              </p>
-              <div class="mt-2">
-                <span class="badge bg-dark">HTML5</span>
-                <span class="badge bg-dark">CSS3</span>
-                <span class="badge bg-dark">JavaScript</span>
-                <span class="badge bg-dark">Bootstrap</span>
-              </div>
-            </div>
-          </li>
-          
-          <!-- Développement iOS -->
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content  border border-1 border-dark rounded">
-              <div class="timeline-date">2023 - 2024</div>
-              <h3 class="timeline-title">Développeur iOS</h3>
-              <p class="timeline-subtitle">OpenClassrooms</p>
-              <p class="timeline-description">
-                Formation et développement d'applications mobiles natives pour iOS en utilisant Swift et SwiftUI.
-                Réalisation de projets concrets comme MarmotMonitor et Reciplease.
-              </p>
-              <div class="mt-2">
-                <span class="badge bg-dark">Swift</span>
-                <span class="badge bg-dark">SwiftUI</span>
-                <span class="badge bg-dark">iOS</span>
-              </div>
-            </div>
-          </li>
-          
-          <!-- Marine Nationale -->
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content  border border-1 border-dark rounded">
-              <div class="timeline-date">2005 - 2024</div>
-              <h3 class="timeline-title">Marine Nationale</h3>
-              <p class="timeline-subtitle">Opérateur embarqué</p>
-              <p class="timeline-description">
-                19 ans de service au sein de la Marine Nationale française. Acquisition de compétences en
-                rigueur, méthode et travail d'équipe. Gestion de projets techniques dans des environnements exigeants.
-              </p>
-              <div class="mt-2">
-                <span class="badge bg-dark">Leadership</span>
-                <span class="badge bg-dark">Gestion de projet</span>
-                <span class="badge bg-dark">Rigueur</span>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <footer id="Contact" class="m-3 d-flex flex-wrap text-center w-100">
-    
-    <p class="col-12 col-md-5 col-lg-4">Copyright @2025 | Designed by Pierrick VIRET</p>
-    </p>
-    <div class="col-12 col-md-5 col-lg-4">
-      <a href="https://www.linkedin.com/in/prk-v" target="_blank">
-        <p class="btn btn-outline-dark px-4 py-2"><span class="fw-bold">in</span> Linkedin</p>
+    </div>
+  </section>
+</main>
+<footer id="Contact" class="row align-items-center justify-content-center">
+  <h2 class="display-5 fw-bold text-center  col-12">Contact</h2>
+  <div class="col-11 d-flex flex-wrap justify-content-center">
+      <a href="https://www.linkedin.com/in/prk-v" target="_blank" class="display-7 p-2 col-12 col-md-4 col-lg-3 col-xl-1 border text-center border-primary rounded m-2 mx-4 text-decoration-none">
+        Linked<span class="fw-bold">In</span>
       </a>
-    </div>
-    <div class="col-12 col-md-5 col-lg-4">
-    <p class="btn btn-outline-dark px-4 py-1">
-      <a href="mailto:pierrickviret&commat;gmail&period;com"><img class="mail_icon" src="/assets/photos/mail.jpeg" alt=""></a>
-    mail  
-    </p>
-    </div>
-  </footer>
-  <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-  crossorigin="anonymous"
-  ></script>
-  <script src="animation.js"></script>
+      <a href="mailto:pierrickviret&commat;gmail&period;com" class="display-7 p-2 col-12 col-md-4 col-lg-3 col-xl-1 border text-center border-primary rounded m-2 mx-4 text-decoration-none">Email</a>
+</div>
+<p class="col-12 text-center">Copyright @2025 | Designed by Pierrick VIRET</p>
+</footer>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+crossorigin="anonymous"
+></script>
+<script src="animation.js"></script>
 </body>
 </html>

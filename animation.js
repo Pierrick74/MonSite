@@ -1,11 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-      const elements = document.querySelectorAll('.title-underline');
-      elements.forEach(function(element) {
-        element.classList.add('animate');
-      });
-    }, 500);
-  });
   
   document.addEventListener('DOMContentLoaded', function() {
     // Utiliser IntersectionObserver pour détecter quand les éléments entrent dans le viewport

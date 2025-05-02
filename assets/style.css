@@ -13,7 +13,6 @@ body{
   background-size: 90%;
   background-repeat: no-repeat;
   aspect-ratio: 1/1;
-  width: 100%;
   max-height: 90vh;
 }
 
@@ -54,24 +53,6 @@ h3 em {
 :root {
   --apple-blue: #0071e3; 
   --apple-blue-light: rgba(0, 113, 227, 0.7); 
-}
-
-/* Style pour la barre de soulignement */
-.title-underline {
-  position: relative;
-  display: inline-block;
-}
-
-.title-underline::after {
-  content: '';
-  position: absolute;
-  bottom: 0px; 
-  left: 0;
-  width: 0; 
-  height: 3px; 
-  background-color: var(--apple-blue);
-  transition: width 1.2s ease-out; 
-  opacity: 0.7; 
 }
 
 /* Classe qui sera ajoutée via JavaScript au chargement de la page */
