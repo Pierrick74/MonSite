@@ -23,3 +23,14 @@
       observer.observe(item);
     });
   });
+
+   // Secure email
+   
+
+   function makeEmail() {
+    const coded = "cGllcnJpY2t2aXJldEBnbWFpbC5jb20="; // base64
+   const email = atob(coded); 
+   let links = document.querySelector("#email");
+  links.href = `mailto:${email}`;
+    };
+
