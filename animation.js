@@ -36,7 +36,9 @@
 
 
     document.addEventListener('DOMContentLoaded', function() {
-      const projetData = JSON.parse(projet.json);
+      fetch('projet.json')
+        .then(response => response.json())
+        .then(projetData => {
 
       const projectsContainer = document.getElementById('projectsPerso');
       projectsContainer.innerHTML = ''; // Clear existing content
@@ -56,7 +58,7 @@
         cardTitle.textContent = project.title;
         const cardSubtitle = document.createElement('h6');
         cardSubtitle.className = 'card-subtitle mb-1 text-secondary';
-        cardSubtitle.textContent = project.subtitle;
+        cardSubtitle.textContent = project.subTitle;
         cardHeader.appendChild(cardTitle);
         cardHeader.appendChild(cardSubtitle);
         cardBody.appendChild(cardHeader);
@@ -69,9 +71,9 @@
         const cardImage = document.createElement('div');
         cardImage.className = 'project-image-container mb-3 mt-auto';
         const image = document.createElement('img');
-        cardImage.src = `assets/photos/${project.photo}.webp`;
+        image.src = `assets/photos/${project.photo}.webp`;
         image.className = 'card-img';
-        image.alt = "image de ${project.photo}";
+        image.alt = `image de ${project.photo}`;
         cardImage.appendChild(image);
         cardBody.appendChild(cardImage);
 
@@ -79,9 +81,15 @@
         cardFooter.className = 'd-flex justify-content-around align-items-center';
         project.icones.forEach(icone => {
           const iconElement = document.createElement('img');
+          if(icone === 'appstore') {
+          iconElement.src = `assets/photos/appstore.webp`;
+          iconElement.className = 'appstore_icone rounded';
+          iconElement.alt = `Icone ${icone}`;
+        } else {
           iconElement.src = `assets/photos/icone/icone_${icone}.webp`;
           iconElement.className = 'rounded techno_icone';
           iconElement.alt = `Icone ${icone}`;
+        }
           cardFooter.appendChild(iconElement);
         })
         cardBody.appendChild(cardFooter);
@@ -93,17 +101,17 @@
 
         const overlayTitle = document.createElement('h3');
         overlayTitle.className = 'overlay-title';
-        overlayTitle.textContent = project.title;
+        overlayTitle.textContent = project.overlayTitle;
         cardOverlay.appendChild(overlayTitle);
 
         const overlayText = document.createElement('p');
         overlayText.className = 'overlay-text';
-        overlayText.textContent = project.text;
+        overlayText.textContent = project.overlayText;
         cardOverlay.appendChild(overlayText);
 
         const overlayfeature = document.createElement('ul');
         overlayfeature.className = 'overlay-features';
-        project.features.forEach(feature => {
+        project.overlayFeatures.forEach(feature => {
           const featureItem = document.createElement('li');
           featureItem.textContent = feature;
           overlayfeature.appendChild(featureItem);
@@ -113,6 +121,9 @@
         projectCard.appendChild(cardOverlay);
 
         projectsContainer.appendChild(projectCard);
-      }
-      );
+      });
+    })
+    .catch(error => {
+      console.error('Erreur lors du chargement des projets:', error);
     });
+  });
