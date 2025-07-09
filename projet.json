@@ -4,7 +4,7 @@
     "subTitle": "New",
     "text": "Portefolio: Création de ce site en HTML5/CSS3.",
     "photo": "site",
-    "icone": [
+    "icones": [
       "html",
       "css",
       "boostrap"
@@ -23,9 +23,9 @@
     "subTitle": "JAN 2025",
     "text": "MarmotMonitor: gestion des premiers jours d'un enfant",
     "photo": "marmotMonitorApp",
-    "icone": [
+    "icones": [
       "swiftui",
-      "appstore",
+      "appstore"
     ],
     "overlayTitle": "MarmotMonitor",
     "overlayText": "Application iOS pour aider les nouveaux parents à suivre et gérer les soins quotidiens de leur nouveau-né.",
@@ -41,7 +41,7 @@
     "subTitle": "2023",
     "text": "Reciplease: application de recette de cuisine",
     "photo": "reciplease",
-    "icone": [
+    "icones": [
       "swift"
     ],
     "overlayTitle": "Reciplease",
