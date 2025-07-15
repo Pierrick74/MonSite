@@ -34,3 +34,11 @@
   links.href = `mailto:${email}`;
     };
 
+const toogleElements = document.querySelectorAll('[data-collapse-toggle]');
+toogleElements.forEach((element) => {
+  element.addEventListener('click', () => {
+    const targetId = element.dataset.collapseToggle;
+    const menu = document.querySelector(targetId);
+    menu.classList.toggle('hidden');
+  })
+});
