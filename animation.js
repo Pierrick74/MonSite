@@ -23,22 +23,26 @@
       observer.observe(item);
     });
   });
-
-   // Secure email
-   
-
-   function makeEmail() {
+  
+  // Secure email
+  function makeEmail() {
     const coded = "cGllcnJpY2t2aXJldEBnbWFpbC5jb20="; // base64
-   const email = atob(coded); 
-   let links = document.querySelector("#email");
-  links.href = `mailto:${email}`;
-    };
+    const email = atob(coded); 
+    let links = document.querySelector("#email");
+    links.href = `mailto:${email}`;
+  };
 
-const toogleElements = document.querySelectorAll('[data-collapse-toggle]');
-toogleElements.forEach((element) => {
-  element.addEventListener('click', () => {
-    const targetId = element.dataset.collapseToggle;
-    const menu = document.querySelector(targetId);
+  // Toggle menu
+  const toggleElements = document.querySelectorAll('[data-collapse-toggle]');
+  toggleElements.forEach((element) => {
+    element.addEventListener('click', () => {
+      const targetId = element.dataset.collapseToggle;
+      const menu = document.querySelectorAll(targetId);
+      menu.forEach(item => item.classList.toggle('hidden'));
+    })
+  });
+
+  function toggleMenu() {
+    const menu = document.querySelector('#main-nav');
     menu.classList.toggle('hidden');
-  })
-});
+  }
