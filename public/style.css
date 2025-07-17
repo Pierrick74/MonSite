@@ -1,23 +1,20 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-
-
-body{
-  background: #FAFAFD;
-  font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+body {
+  background: #fafafd;
+  font-family:
+    SF Pro Display,
+    SF Pro Icons,
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
-#Description h4, #Description p, h5 {
+#Description h4,
+#Description p,
+h5 {
   color: gray;
-}
-
-/* photo avec degradé  */
-.bg{
-  background: linear-gradient(to bottom, transparent 60%, #FAFAFD),url("../assets/photos/img_profile.webp");
-  background-size: 90%;
-  background-repeat: no-repeat;
-  aspect-ratio: 1/1;
-  max-height: 90vh;
 }
 
 /* Style pour le conteneur de la carte */
@@ -56,8 +53,8 @@ h3 em {
 
 /* Définition de la couleur bleue Apple */
 :root {
-  --apple-blue: #0071e3; 
-  --apple-blue-light: rgba(0, 113, 227, 0.7); 
+  --apple-blue: #0071e3;
+  --apple-blue-light: rgba(0, 113, 227, 0.7);
 }
 
 /* Classe qui sera ajoutée via JavaScript au chargement de la page */
@@ -70,7 +67,9 @@ h3 em {
 .project-card {
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   will-change: transform;
 }
 
@@ -85,7 +84,9 @@ h3 em {
   color: white;
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -155,7 +156,7 @@ h3 em {
 /* Liste de la timeline */
 .timeline-list {
   list-style: none;
-  padding-left: 60px; 
+  padding-left: 60px;
   position: relative;
 }
 
@@ -165,8 +166,8 @@ h3 em {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 15px; 
-  width: 2px; 
+  left: 15px;
+  width: 2px;
   background: linear-gradient(to bottom, #e6e6e6 85%, transparent 100%);
 }
 
@@ -194,7 +195,7 @@ h3 em {
   background-color: #f8f8f8;
   padding: 25px;
   border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 /* Style pour l'année/date */
@@ -210,7 +211,9 @@ h3 em {
   font-size: 1.5rem;
   transform: translateY(20px);
   opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
   transition-delay: 0.1s;
 }
 
@@ -221,7 +224,9 @@ h3 em {
   margin-bottom: 15px;
   transform: translateY(20px);
   opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
   transition-delay: 0.2s;
 }
 
@@ -230,13 +235,17 @@ h3 em {
   padding: 6px 12px;
   transform: translateY(20px);
   opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
   transition-delay: 0.4s;
 }
 .timeline-description {
   transform: translateY(20px);
   opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
   transition-delay: 0.3s;
 }
 
