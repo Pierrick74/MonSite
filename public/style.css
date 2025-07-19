@@ -12,6 +12,10 @@
   @apply rounded-2xl;
 }
 
+.project-image {
+  @apply my-3 rounded-lg object-cover;
+}
+
 .project-card-base {
   @apply relative mt-5 overflow-hidden rounded-lg bg-zinc-900 transition-all duration-300 ease-in-out;
 }
@@ -26,6 +30,18 @@
 
 .project-card-base:hover .card-overlay {
   @apply translate-y-0 opacity-100;
+}
+
+.project-overlay-title {
+  @apply text-xl;
+}
+
+.project-overlay-text {
+  @apply text-lg font-bold text-zinc-400;
+}
+
+.project-overlay-features {
+  @apply text-lg;
 }
 
 body {
@@ -310,18 +326,4 @@ h3 em {
 .fancy:hover .bottom-key-2 {
   right: 0;
   width: 0;
-}
-
-@media (min-width: 1600px) {
-  .overlay-title {
-    font-size: 2.5rem;
-  }
-
-  .overlay-text {
-    font-size: 1.5rem;
-  }
-
-  .overlay-features li {
-    font-size: 1.2rem;
-  }
 }
