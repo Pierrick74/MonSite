@@ -37,19 +37,19 @@
       <div class="mt-2 hidden w-full transition-all duration-300 ease-in-out md:block" id="main-nav">
         <ul class="mt-4 border border-zinc-200 bg-zinc-800 p-4 font-medium md:my-0 md:flex md:gap-5 md:border-0 md:bg-transparent md:py-0">
           <div class="flex align-bottom md:hidden">
-            <p class="mr-2 text-xl text-zinc-100 md:mb-0">Pierrick VIRET</p>
-            <p class="align-bottom text-lg text-zinc-300">Développeur Web et mobile</p>
+            <p class="mr-2 text-xl xl:text-2xl 2xl:text-3xl text-zinc-100 md:mb-0">Pierrick VIRET</p>
+            <p class="align-bottom text-lg xl:text-xl 2xl:text-2xl text-zinc-300">Développeur Web et mobile</p>
           </div>
-          <li class="ml-auto text-lg text-zinc-300 md:text-zinc-900" data-collapse-toggle="#main-nav">
+          <li class="nav-link ml-auto" data-collapse-toggle="#main-nav">
             <a href="#Description">Accueil</a>
           </li>
-          <li class="text-lg text-zinc-300 md:text-zinc-900" data-collapse-toggle="#main-nav">
+          <li class="nav-link" data-collapse-toggle="#main-nav">
             <a href="#projects">Projets</a>
           </li>
-          <li class="text-lg text-zinc-300 md:text-zinc-900" data-collapse-toggle="#main-nav">
+          <li class="nav-link" data-collapse-toggle="#main-nav">
             <a href="#Competences">Compétences</a>
           </li>
-          <li class="text-lg text-zinc-300 md:text-zinc-900" data-collapse-toggle="#main-nav">
+          <li class="nav-link" data-collapse-toggle="#main-nav">
             <a href="#Contact">Contact</a>
           </li>
         </ul>
@@ -70,32 +70,32 @@
     <section id="Description" class="h-full w-screen items-center">
       <div
       class="flex h-screen w-full items-end justify-items-end bg-[url(/assets/photos/img_profile.webp)] bg-size-[70vh] bg-fixed bg-center bg-no-repeat md:bg-size-[85vh] md:bg-bottom-right lg:bg-size-[80vh]">
-      <div class="bg-zinc-50 p-3 rounded-t-1g xl:w-1/2">
-        <h5 class="tracking-wide uppercase md:text-2xl lg:my-2">Pierrick VIRET</h5>
-        <h1 class="text-2xl font-bold lg:text-5xl">Développeur Web et mobile</h1>
-        <p class="text-justify md:text-xl lg:text-2xl lg:my-2">
+      <div class="bg-zinc-50 p-3 rounded-t-1g xl:w-1/2 px-5 pt-5">
+        <h5 class="tracking-tight uppercase md:text-2xl xl:text-2xl 2xl:text-4xl lg:my-2 text-zinc-500">Pierrick VIRET</h5>
+        <h1 class="my-4 text-2xl font-bold lg:text-5xl xl:text-6xl 2xl:text-9xl">Développeur Web et mobile</h1>
+        <p class="tracking-wide text-justify md:text-xl lg:text-2xl xl:text-xl 2xl:text-4xl 2xl:leading-12 lg:my-5 font-light text-zinc-500">
           Développeur iOS en formation développement web front-end. Mon parcours de 19 ans dans la Marine Nationale m'a doté d'une rigueur que j'applique désormais à la création d'interfaces
           utilisateur mobiles et web performantes.
         </p>
         <div class="flex flex-wrap gap-2 md:gap-5 mt-2 items-center mb-3">
-          <h3 class="p-[1em] md:text-xl lg:text-2xl lg:p-0">Faites décoller votre projet&nbsp;!</h3>
+          <h3 class="p-[1em] md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl lg:p-0">Faites décoller votre projet&nbsp;!</h3>
           <a class="fancy" href="#Contact">
             <span class="top-key"></span>
-            <span class="text">me contacter</span>
+            <span class="text 2xl:text-6xl">me contacter</span>
             <span class="bottom-key-1"></span>
             <span class="bottom-key-2"></span>
           </a>
         </div>
       </div>
     </section>
-    <section id="projects" class="h-full w-screen items-center">
-      <h2 class="text-6xl font-bold px-5 pt-5">Projects Personnels</h2>
-      <ul class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-7 md:gap-10 lg:gap-20 justify-items-center px-5">
+    <section id="projects" class="h-full w-screen items-center mt-20">
+      <h2 class="text-6xl 2xl:text-8xl font-bold px-5 pt-5">Projects Personnels</h2>
+      <ul class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-7 md:gap-10 lg:gap-20 2xl:gap-40 justify-items-center px-5">
         <li class="project-card-base ">
           <div class="project-card-content">
-            <h5 class="text-xl font-bold ">Site internet</h5>
-            <h6 class=" font-bold text-zinc-400">New</h6>
-            <p class="text-lg ">Portefolio: Création de ce site en HTML5/CSS3/Tailwind CSS.</p>
+            <h5 class="project-card-title">Site internet</h5>
+            <h6 class="project-card-subtitle">New</h6>
+            <p class="project-card-text">Portefolio: Création de ce site en HTML5/CSS3/Tailwind CSS.</p>
             <img src="assets/photos/site.webp" class="project-image" alt="Image du site" />
             <div class="project-card-icones">
               <img class="project-icon-tech" src="assets/photos/icone/icone_html.webp" alt="" />
@@ -117,9 +117,9 @@
         </li>
         <li class="project-card-base">
           <div class="project-card-content">
-            <h5 class="text-xl font-bold">Application Mobile</h5>
-            <h6 class="font-bold text-zinc-400">JAN 2025</h6>
-            <p class="text-lg">MarmotMonitor: gestion des premiers jours d'un enfant</p>
+            <h5 class="project-card-title">Application Mobile</h5>
+            <h6 class="project-card-subtitle">JAN 2025</h6>
+            <p class="project-card-text">MarmotMonitor: gestion des premiers jours d'un enfant</p>
             <img src="assets/photos/marmotMonitorApp.webp" class="project-image" alt="Image de MarmotMonitor" />
             
             <div class="grid grid-cols-3 gap-4">
@@ -141,9 +141,9 @@
         </li>
         <li class="project-card-base">
           <div class="project-card-content">
-            <h5 class="text-xl font-bold">Application Mobile</h5>
-            <h6 class="font-bold text-zinc-400">2023</h6>
-            <p class="text-lg">Reciplease: application de recette de cuisine</p>
+            <h5 class="project-card-title">Application Mobile</h5>
+            <h6 class="project-card-subtitle">2023</h6>
+            <p class="project-card-text">Reciplease: application de recette de cuisine</p>
             
             <img src="assets/photos/reciplease.webp" class="project-image" alt="Image de Reciplease" />
             

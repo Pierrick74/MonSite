@@ -1,7 +1,23 @@
 @import 'tailwindcss';
 
+.nav-link {
+  @apply text-lg text-zinc-300 md:text-zinc-900 xl:text-2xl 2xl:text-5xl;
+}
+
 .project-card-content {
   @apply flex w-full flex-col justify-between p-3 text-zinc-50;
+}
+
+.project-card-title {
+  @apply text-xl font-bold 2xl:text-5xl;
+}
+
+.project-card-subtitle {
+  @apply my-2 font-bold text-zinc-400 2xl:text-3xl;
+}
+
+.project-card-text {
+  @apply text-lg 2xl:text-4xl;
 }
 
 .project-card-icones {
@@ -237,6 +253,13 @@ h3 em {
   transition: all 0.3s ease-in-out;
   user-select: none;
   font-size: 13px;
+}
+
+@media (min-width: 1536px) {
+  .fancy {
+    font-size: 18px;
+    padding: 1.5em 2.5em;
+  }
 }
 
 .fancy::before {
