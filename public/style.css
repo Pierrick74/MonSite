@@ -21,7 +21,7 @@
 }
 
 .project-card-icones {
-  @apply grid grid-cols-3 gap-5 md:gap-10 xl:gap-10 2xl:gap-20 2xl:mx-10 xl:mx-15 mx-6 md:mx-10;
+  @apply grid grid-cols-3 gap-5 md:gap-5 xl:gap-10 2xl:gap-20 2xl:mx-10 xl:mx-15 mx-6 md:mx-5;
 }
 
 .project-icon-tech {
