@@ -5,7 +5,7 @@
 }
 
 .project-card-content {
-  @apply flex w-full flex-col justify-between p-3 text-zinc-50;
+  @apply flex w-full flex-col justify-between p-3 text-zinc-50 h-full;
 }
 
 .project-card-title {
@@ -21,7 +21,7 @@
 }
 
 .project-card-icones {
-  @apply grid grid-cols-3 gap-10 md:gap-15 xl:gap-20 2xl:gap-40;
+  @apply grid grid-cols-3 gap-5 md:gap-10 xl:gap-10 2xl:gap-20 2xl:mx-10 xl:mx-15 mx-6 md:mx-10;
 }
 
 .project-icon-tech {
