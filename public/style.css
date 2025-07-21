@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .nav-link {
-  @apply text-lg text-zinc-300 md:text-zinc-900 xl:text-2xl;
+  @apply text-lg text-zinc-300 md:text-zinc-900 xl:text-xl;
 }
 
 .project-card-content {
