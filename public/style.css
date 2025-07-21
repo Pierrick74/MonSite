@@ -5,7 +5,7 @@
 }
 
 .project-card-content {
-  @apply flex w-full flex-col justify-between p-3 text-zinc-50 h-full;
+  @apply flex h-full w-full flex-col justify-between p-3 text-zinc-50;
 }
 
 .project-card-title {
@@ -21,7 +21,7 @@
 }
 
 .project-card-icones {
-  @apply grid grid-cols-3 gap-5 md:gap-5 xl:gap-10 2xl:gap-20 2xl:mx-10 xl:mx-15 mx-6 md:mx-5;
+  @apply mx-6 grid grid-cols-3 gap-5 md:mx-5 md:gap-5 xl:mx-15 xl:gap-10 2xl:mx-10 2xl:gap-20;
 }
 
 .project-icon-tech {
@@ -49,35 +49,39 @@
 }
 
 .project-overlay-title {
-  @apply text-xl 2xl:text-2xl my-4 text-justify;
+  @apply my-4 text-justify text-xl 2xl:text-2xl;
 }
 
 .project-overlay-text {
-  @apply text-lg font-bold text-zinc-400 2xl:text-xl my-4 text-justify;
+  @apply my-4 text-justify text-lg font-bold text-zinc-400 2xl:text-xl;
 }
 
 .project-overlay-features {
-  @apply text-lg 2xl:text-xl list-disc  px-5 text-justify;
+  @apply list-disc px-5 text-justify text-lg 2xl:text-xl;
 }
 
 .section-title {
-  @apply text-xl tracking-tight leading-tight font-bold lg:text-4xl xl:text-5xl px-5 pt-5;
+  @apply px-5 pt-5 text-xl leading-tight font-bold tracking-tight lg:text-4xl xl:text-5xl;
 }
 
 .competances-title {
-  @apply  flex items-center text-zinc-500 text-base lg:text-xl xl:text-xl 2xl:text-2xl font-semibold tracking-tight leading-snug;
+  @apply flex items-center text-base leading-snug font-semibold tracking-tight text-zinc-500 lg:text-xl xl:text-xl 2xl:text-2xl;
 }
 
 .competances-corps {
-  @apply text-base lg:text-lg xl:text-lg 2xl:text-xl font-normal tracking-normal leading-relaxed;
+  @apply text-base leading-relaxed font-normal tracking-normal lg:text-lg xl:text-lg 2xl:text-xl;
 }
 
 .cercleFill {
-  @apply h-3 w-3 rounded-full bg-zinc-900  mx-1.5;
+  @apply mx-1.5 h-3 w-3 rounded-full bg-zinc-900;
 }
 
 .cercleEmpty {
-  @apply h-3 w-3 rounded-full border border-zinc-900  mx-1.5;
+  @apply mx-1.5 h-3 w-3 rounded-full border border-zinc-900;
+}
+
+.parcours-badge {
+  @apply mx-1 rounded-2xl bg-zinc-950 px-3 py-1 text-zinc-50;
 }
 
 body {
@@ -89,41 +93,6 @@ body {
     Helvetica,
     Arial,
     sans-serif;
-}
-
-/* Style pour le conteneur de la carte */
-.card-title {
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-.card-text {
-  font-size: 0.95rem;
-  margin-bottom: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.card-subtitle {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.appstore_icone {
-  height: 40px;
-}
-
-h3 em {
-  color: #0071e3;
-  font-style: italic;
-  font-weight: lighter;
-}
-
-/* Définition de la couleur bleue Apple */
-:root {
-  --apple-blue: #0071e3;
-  --apple-blue-light: rgba(0, 113, 227, 0.7);
 }
 
 /* Classe qui sera ajoutée via JavaScript au chargement de la page */
@@ -141,16 +110,14 @@ h3 em {
 
 /* Liste de la timeline */
 .timeline-list {
-  list-style: none;
-  padding-left: 60px;
-  position: relative;
+  @apply relative list-none pl-15;
 }
 
 /* Ligne verticale principale */
 .timeline-list::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 20px;
   bottom: 0;
   left: 15px;
   width: 2px;
@@ -159,80 +126,41 @@ h3 em {
 
 /* Items de la timeline */
 .timeline-item {
-  position: relative;
-  margin-bottom: 60px; /* Espacement entre les items */
-  padding-bottom: 20px;
+  @apply relative mb-15 pb-5;
 }
 
 /* Marqueurs (cercles) sur la ligne */
 .timeline-marker {
-  position: absolute;
-  left: -52px; /* Position par rapport au padding-left du parent */
-  top: 5px; /* Alignement vertical avec le titre */
-  width: 16px; /* Taille du cercle */
-  height: 16px;
-  border-radius: 50%;
-  background-color: #333; /* Même couleur que vos boutons sombres */
-  z-index: 1; /* Au-dessus de la ligne */
+  @apply absolute top-1.5 -left-13 z-10 h-4 w-4 rounded-full bg-gray-800;
 }
 
 /* Style pour le contenu de chaque item */
 .timeline-content {
-  background-color: #f8f8f8;
-  padding: 25px;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  @apply rounded rounded-lg border border-zinc-700 bg-zinc-50 p-5 shadow-xl;
 }
 
 /* Style pour l'année/date */
 .timeline-date {
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #666;
+  @apply mb-3 text-sm leading-snug font-bold tracking-tight text-zinc-500 lg:text-base xl:text-base 2xl:text-lg;
 }
 
 /* Titre de l'expérience */
 .timeline-title {
-  margin-bottom: 5px;
-  font-size: 1.5rem;
-  transform: translateY(20px);
-  opacity: 0;
-  transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
-  transition-delay: 0.1s;
+  @apply text-lg leading-tight font-bold tracking-tight lg:text-3xl xl:text-3xl 2xl:text-4xl;
 }
 
 /* Sous-titre (entreprise/école) */
 .timeline-subtitle {
-  color: #666;
-  font-style: italic;
-  margin-bottom: 15px;
-  transform: translateY(20px);
-  opacity: 0;
-  transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
-  transition-delay: 0.2s;
+  @apply mb-3 text-sm leading-normal font-normal tracking-normal text-zinc-500 italic lg:text-base xl:text-base 2xl:text-lg;
 }
 
-.timeline-tags .badge {
-  margin-right: 5px;
-  padding: 6px 12px;
-  transform: translateY(20px);
-  opacity: 0;
-  transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
-  transition-delay: 0.4s;
-}
 .timeline-description {
-  transform: translateY(20px);
-  opacity: 0;
-  transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
-  transition-delay: 0.3s;
+  @apply text-base leading-relaxed font-normal tracking-normal lg:text-lg xl:text-lg 2xl:text-xl;
+}
+
+/* Classes d'animation avec @apply */
+.timeline-animate {
+  @apply translate-y-7 opacity-0 transition-all duration-1000 ease-out;
 }
 
 /* Animation activée */
@@ -240,8 +168,7 @@ h3 em {
 .timeline-item.visible .timeline-subtitle,
 .timeline-item.visible .timeline-description,
 .timeline-item.visible .timeline-tags {
-  transform: translateY(0);
-  opacity: 1;
+  @apply translate-y-0 opacity-100;
 }
 
 .mail_icon {
@@ -274,7 +201,6 @@ h3 em {
   user-select: none;
   font-size: 13px;
 }
-
 
 .fancy::before {
   content: ' ';
