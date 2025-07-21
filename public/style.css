@@ -21,11 +21,11 @@
 }
 
 .project-card-icones {
-  @apply grid grid-cols-3 gap-4 2xl:gap-20;
+  @apply grid grid-cols-3 gap-10 md:gap-15 xl:gap-20 2xl:gap-40;
 }
 
 .project-icon-tech {
-  @apply rounded-2xl;
+  @apply rounded-lg;
 }
 
 .project-image {
@@ -58,6 +58,26 @@
 
 .project-overlay-features {
   @apply text-lg 2xl:text-xl list-disc  px-5 text-justify;
+}
+
+.section-title {
+  @apply text-xl tracking-tight leading-tight font-bold lg:text-4xl xl:text-5xl px-5 pt-5;
+}
+
+.competances-title {
+  @apply  flex items-center text-zinc-500 text-base lg:text-xl xl:text-xl 2xl:text-2xl font-semibold tracking-tight leading-snug;
+}
+
+.competances-corps {
+  @apply text-base lg:text-lg xl:text-lg 2xl:text-xl font-normal tracking-normal leading-relaxed;
+}
+
+.cercleFill {
+  @apply h-3 w-3 rounded-full bg-zinc-900  mx-1.5;
+}
+
+.cercleEmpty {
+  @apply h-3 w-3 rounded-full border border-zinc-900  mx-1.5;
 }
 
 body {
