@@ -81,7 +81,7 @@
 }
 
 .parcours-badge {
-  @apply mx-1 rounded-2xl bg-zinc-950 px-3 py-1 text-zinc-50;
+  @apply mx-1 rounded-2xl bg-zinc-950 px-3 py-1 text-zinc-50 text-center;
 }
 
 .contact-btn {
