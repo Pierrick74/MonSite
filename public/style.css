@@ -81,11 +81,11 @@
 }
 
 .parcours-badge {
-  @apply mx-1 rounded-2xl bg-zinc-950 px-3 py-1 text-zinc-50 text-center;
+  @apply mx-1 rounded-2xl bg-zinc-950 px-3 py-1 text-center text-zinc-50;
 }
 
 .contact-btn {
-  @apply border border-zinc-900 px-4 py-1 m-1 rounded-xl hover:bg-zinc-900 hover:text-zinc-50;
+  @apply m-1 rounded-xl border border-zinc-900 px-4 py-1 hover:bg-zinc-900 hover:text-zinc-50;
 }
 
 body {
@@ -97,19 +97,6 @@ body {
     Helvetica,
     Arial,
     sans-serif;
-}
-
-/* Classe qui sera ajoutée via JavaScript au chargement de la page */
-.title-underline.animate::after {
-  width: 100%; /* Longueur finale de la barre */
-}
-
-/* Container de la timeline */
-.timeline-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
 }
 
 /* Liste de la timeline */
@@ -140,7 +127,7 @@ body {
 
 /* Style pour le contenu de chaque item */
 .timeline-content {
-  @apply rounded rounded-lg border border-zinc-700 bg-zinc-50 p-5 shadow-xl;
+  @apply rounded-lg border border-zinc-700 bg-zinc-50 p-5 shadow-xl;
 }
 
 /* Style pour l'année/date */
@@ -170,15 +157,8 @@ body {
 /* Animation activée */
 .timeline-item.visible .timeline-title,
 .timeline-item.visible .timeline-subtitle,
-.timeline-item.visible .timeline-description,
-.timeline-item.visible .timeline-tags {
+.timeline-item.visible .timeline-description {
   @apply translate-y-0 opacity-100;
-}
-
-.mail_icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 5px;
 }
 
 /* Boutton me contacter*/
@@ -190,7 +170,6 @@ body {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  float: right;
   font-weight: 700;
   letter-spacing: 0.05em;
   margin: 0;
