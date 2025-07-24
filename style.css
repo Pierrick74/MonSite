@@ -1,0 +1,275 @@
+@import 'tailwindcss';
+
+.nav-link {
+  @apply text-lg text-zinc-300 md:text-zinc-900 xl:text-xl;
+}
+
+.project-card-content {
+  @apply flex h-full w-full flex-col justify-between p-3 text-zinc-50;
+}
+
+.project-card-title {
+  @apply text-xl font-bold 2xl:text-2xl;
+}
+
+.project-card-subtitle {
+  @apply my-2 font-bold text-zinc-400 2xl:text-lg;
+}
+
+.project-card-text {
+  @apply text-lg 2xl:text-xl;
+}
+
+.project-card-icones {
+  @apply mx-6 grid grid-cols-3 gap-5 md:mx-5 md:gap-5 xl:mx-15 xl:gap-10 2xl:mx-10 2xl:gap-20;
+}
+
+.project-icon-tech {
+  @apply rounded-lg;
+}
+
+.project-image {
+  @apply my-3 rounded-lg object-cover;
+}
+
+.project-card-base {
+  @apply relative mt-5 overflow-hidden rounded-lg bg-zinc-900 transition-all duration-300 ease-in-out;
+}
+
+.project-card-base:hover {
+  @apply -translate-y-1 shadow-2xl;
+}
+
+.card-overlay {
+  @apply absolute inset-0 flex h-full w-full translate-y-full flex-col justify-center bg-black/90 p-6 text-white opacity-0 transition-all duration-400 ease-in-out;
+}
+
+.project-card-base:hover .card-overlay {
+  @apply translate-y-0 opacity-100;
+}
+
+.project-overlay-title {
+  @apply my-4 text-justify text-xl 2xl:text-2xl;
+}
+
+.project-overlay-text {
+  @apply my-4 text-justify text-lg font-bold text-zinc-400 2xl:text-xl;
+}
+
+.project-overlay-features {
+  @apply list-disc px-5 text-justify text-lg 2xl:text-xl;
+}
+
+.section-title {
+  @apply px-5 pt-5 text-xl leading-tight font-bold tracking-tight lg:text-4xl xl:text-5xl;
+}
+
+.competances-title {
+  @apply flex items-center text-base leading-snug font-semibold tracking-tight text-zinc-500 lg:text-xl xl:text-xl 2xl:text-2xl;
+}
+
+.competances-corps {
+  @apply text-base leading-relaxed font-normal tracking-normal lg:text-lg xl:text-lg 2xl:text-xl;
+}
+
+.cercleFill {
+  @apply mx-1.5 h-3 w-3 rounded-full bg-zinc-900;
+}
+
+.cercleEmpty {
+  @apply mx-1.5 h-3 w-3 rounded-full border border-zinc-900;
+}
+
+.parcours-badge {
+  @apply mx-1 rounded-2xl bg-zinc-950 px-3 py-1 text-center text-zinc-50;
+}
+
+.contact-btn {
+  @apply m-1 rounded-xl border border-zinc-900 px-4 py-1 hover:bg-zinc-900 hover:text-zinc-50;
+}
+
+body {
+  background: #fafafd;
+  font-family:
+    SF Pro Display,
+    SF Pro Icons,
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+/* Liste de la timeline */
+.timeline-list {
+  @apply relative list-none pl-15;
+}
+
+/* Ligne verticale principale */
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 15px;
+  width: 2px;
+  background: linear-gradient(to bottom, #e6e6e6 85%, transparent 100%);
+}
+
+/* Items de la timeline */
+.timeline-item {
+  @apply relative mb-15 pb-5;
+}
+
+/* Marqueurs (cercles) sur la ligne */
+.timeline-marker {
+  @apply absolute top-1.5 -left-13 z-10 h-4 w-4 rounded-full bg-gray-800;
+}
+
+/* Style pour le contenu de chaque item */
+.timeline-content {
+  @apply rounded-lg border border-zinc-700 bg-zinc-50 p-5 shadow-xl;
+}
+
+/* Style pour l'année/date */
+.timeline-date {
+  @apply mb-3 text-sm leading-snug font-bold tracking-tight text-zinc-500 lg:text-base xl:text-base 2xl:text-lg;
+}
+
+/* Titre de l'expérience */
+.timeline-title {
+  @apply text-lg leading-tight font-bold tracking-tight lg:text-3xl xl:text-3xl 2xl:text-4xl;
+}
+
+/* Sous-titre (entreprise/école) */
+.timeline-subtitle {
+  @apply mb-3 text-sm leading-normal font-normal tracking-normal text-zinc-500 italic lg:text-base xl:text-base 2xl:text-lg;
+}
+
+.timeline-description {
+  @apply text-base leading-relaxed font-normal tracking-normal lg:text-lg xl:text-lg 2xl:text-xl;
+}
+
+/* Classes d'animation avec @apply */
+.timeline-animate {
+  @apply translate-y-7 opacity-0 transition-all duration-1000 ease-out;
+}
+
+/* Animation activée */
+.timeline-item.visible .timeline-title,
+.timeline-item.visible .timeline-subtitle,
+.timeline-item.visible .timeline-description {
+  @apply translate-y-0 opacity-100;
+}
+
+/* Boutton me contacter*/
+.fancy {
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1em 1.75em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: ' ';
+  width: 1.5625rem;
+  height: 2px;
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition:
+    background 0.3s linear,
+    width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition:
+    width 0.5s ease-out,
+    left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition:
+    width 0.5s ease-out,
+    right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition:
+    width 0.5s ease-out,
+    right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: black;
+}
+
+.fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
