@@ -1,42 +1,54 @@
 import React from 'react'
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Link } from 'lucide-react'
+
+const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+};
 
 function App() {
     return (
         <div className="App">
             <header>
-                <nav class="fixed start-0 top-0 z-10 w-screen bg-zinc-100/90">
-                    <div class="mt-2 hidden w-full transition-all duration-300 ease-in-out md:block" id="main-nav">
-                        <ul class="mt-4 border border-zinc-200 bg-zinc-800 p-4 font-medium md:my-0 md:flex md:gap-5 md:border-0 md:bg-transparent md:py-0">
-                            <div class="flex align-bottom md:hidden">
-                                <p class="mr-2 text-xl xl:text-2xl 2xl:text-3xl text-zinc-100 md:mb-0">Pierrick VIRET</p>
-                                <p class="align-bottom text-lg xl:text-xl 2xl:text-2xl text-zinc-300">Développeur Web et mobile</p>
-                            </div>
-                            <li class="nav-link ml-auto" data-collapse-toggle="#main-nav">
-                                <a href="#Description">Accueil</a>
-                            </li>
-                            <li class="nav-link" data-collapse-toggle="#main-nav">
-                                <a href="#projects">Projets</a>
-                            </li>
-                            <li class="nav-link" data-collapse-toggle="#main-nav">
-                                <a href="#Competences">Compétences</a>
-                            </li>
-                            <li class="nav-link" data-collapse-toggle="#main-nav">
-                                <a href="#Contact">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-wrap items-center justify-end p-4">
-                        <div class="md:hidden">
-                            <button data-collapse-toggle="#main-nav">
-                                <span class="sr-only">Ouvrir le menu</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 17 14" fill="none" aria-hidden="true">
-                                    <path stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M1 1h15M1 7h15M1 13h15" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </nav>
-            </header>
+                <div class="m-6">
+                    <DropdownMenu>
+                        <DropdownMenuTrigger><span class="sr-only">Ouvrir le menu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 17 14" fill="none" aria-hidden="true">
+                                <path stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="w-56" align="start" sideOffset={5}>
+                            <DropdownMenuLabel>Pierrick VIRET</DropdownMenuLabel>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuItem onClick={() => scrollToSection('projects')}>
+                                Projets
+                            </DropdownMenuItem>
+                            <DropdownMenuItem onClick={() => scrollToSection('Competences')}>
+                                Compétences
+                            </DropdownMenuItem>
+                            <DropdownMenuItem onClick={() => scrollToSection('parcours')}>
+                                Parcours
+                            </DropdownMenuItem>
+                            <DropdownMenuItem onClick={() => scrollToSection('Contact')}>
+                                Contact
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                </div>
+            </header >
             <main>
                 <h1 class="sr-only">Pierrick VIRET Développeur Web et mobile</h1>
                 <section id="Description" class="h-full w-screen items-center">
@@ -291,7 +303,7 @@ function App() {
                 <p class="text-center mb-5">Copyright @2025 | Designed by Pierrick VIRET</p>
             </footer>
             <script src="animation.js"></script>
-        </div>
+        </div >
     )
 }
 
