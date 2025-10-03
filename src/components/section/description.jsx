@@ -1,7 +1,7 @@
-import { ContactBtn } from './components/ui/contact-button';
+import { ContactBtn } from '../ui/contact-button';
 
 export function Description() {
-    <section id="Description" class="h-full w-screen items-center">
+    return <section id="Description" class="h-full w-screen items-center">
         <div
             class="flex h-screen w-full items-end justify-items-end bg-[url(/assets/photos/img_profile.webp)] bg-size-[70vh] bg-fixed bg-center bg-no-repeat md:bg-size-[85vh] md:bg-bottom-right lg:bg-size-[80vh]">
             <div class="bg-zinc-50 p-3 rounded-t-1g xl:w-1/2 px-5 pt-5">
