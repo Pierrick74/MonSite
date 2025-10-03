@@ -1,13 +1,8 @@
 import React from 'react'
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+
 import { Link } from 'lucide-react'
+import { ContactBtn } from './components/ui/contact-button';
+import { SectionMenu } from './components/section/section-menu';
 
 const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -24,29 +19,7 @@ function App() {
         <div className="App">
             <header>
                 <div class="m-6">
-                    <DropdownMenu>
-                        <DropdownMenuTrigger><span class="sr-only">Ouvrir le menu</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 17 14" fill="none" aria-hidden="true">
-                                <path stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M1 1h15M1 7h15M1 13h15" />
-                            </svg>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent className="w-56" align="start" sideOffset={5}>
-                            <DropdownMenuLabel>Pierrick VIRET</DropdownMenuLabel>
-                            <DropdownMenuSeparator />
-                            <DropdownMenuItem onClick={() => scrollToSection('projects')}>
-                                Projets
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => scrollToSection('Competences')}>
-                                Compétences
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => scrollToSection('parcours')}>
-                                Parcours
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => scrollToSection('Contact')}>
-                                Contact
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                    <SectionMenu />
                 </div>
             </header >
             <main>
@@ -63,12 +36,7 @@ function App() {
                             </p>
                             <div class="flex flex-wrap md:gap-5 mt-2 items-center mb-3">
                                 <p class="p-[1em] md:text-xl 2xl:text-2xl lg:p-0">Faites décoller votre projet&nbsp;!</p>
-                                <a class="fancy" href="#Contact">
-                                    <span class="top-key"></span>
-                                    <span class="text">me contacter</span>
-                                    <span class="bottom-key-1"></span>
-                                    <span class="bottom-key-2"></span>
-                                </a>
+                                <ContactBtn />
                             </div>
                         </div>
                     </div>
