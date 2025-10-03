@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link } from 'lucide-react'
 import { ContactBtn } from './components/ui/contact-button';
-import { SectionMenu } from './components/section/section-menu';
+import { Header } from './components/section/header';
 
 const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -17,11 +17,7 @@ const scrollToSection = (id) => {
 function App() {
     return (
         <div className="App">
-            <header>
-                <div class="m-6">
-                    <SectionMenu />
-                </div>
-            </header >
+            <Header />
             <main>
                 <h1 class="sr-only">Pierrick VIRET Développeur Web et mobile</h1>
                 <section id="Description" class="h-full w-screen items-center">
