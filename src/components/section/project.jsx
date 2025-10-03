@@ -1,9 +1,34 @@
+import { ProductCard } from "../projectCard"
+
+const PROJECTS = [
+    {
+        id: 1,
+        title: "Site Internet",
+        subtitle: "New",
+        text: "Portefolio: Création de ce site en HTML5/CSS3/Tailwind CSS.",
+        imagePath: "assets/photos/site.webp",
+        imageAlt: "Image de mon site actuellement"
+    },
+    {
+        id: 1,
+        title: "Site Internet",
+        subtitle: "New",
+        text: "Portefolio: Création de ce site en HTML5/CSS3/Tailwind CSS.",
+        imagePath: "assets/photos/site.webp",
+        imageAlt: "Image de mon site actuellement"
+    }
+]
 
 export function SectionProjet() {
     return (
         <section id="projects" class="h-full w-screen items-center mt-20">
             <h2 class="section-title">Projects Personnels</h2>
             <ul class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-7 md:gap-10 lg:gap-20 2xl:gap-40 justify-items-center px-5 2xl:px-30">
+                {PROJECTS.map(project => (
+                    <ProjectCard key={project.id}
+                        project={project} />
+                ))}
+
                 <li class="project-card-base ">
                     <div class="project-card-content">
                         <h3 class="project-card-title">Site internet</h3>
