@@ -1,4 +1,4 @@
-import { ProductCard } from "../projectCard"
+import { ProjectCard } from "../projectCard"
 
 const PROJECTS = [
     {
@@ -7,15 +7,71 @@ const PROJECTS = [
         subtitle: "New",
         text: "Portefolio: Création de ce site en HTML5/CSS3/Tailwind CSS.",
         imagePath: "assets/photos/site.webp",
-        imageAlt: "Image de mon site actuellement"
+        imageAlt: "Image de mon site actuellement",
+        technologies: [
+            {
+                src: "assets/photos/icone/icone_html.webp",
+                alt: "Logo HTML5"
+            },
+            {
+                src: "assets/photos/icone/icone_react.webp",
+                alt: "Logo React"
+            },
+            {
+                src: "assets/photos/icone/icone_tailwind.webp",
+                alt: "Logo Tailwind CSS"
+            }
+        ],
+        overlayTitle: "Portfolio Personnel",
+        overlayText: "Portfolio conçu avec un design minimaliste inspiré d'Apple pour présenter mes projets et compétences en développement web.",
+        overlayInfo: ["Responsive design (Tailwind CSS)",
+            "Interface utilisateur épurée et intuitive",
+            "Animations CSS pour une meilleure expérience",
+            "Structure sémantique SEO-friendly"]
+
     },
     {
-        id: 1,
-        title: "Site Internet",
-        subtitle: "New",
-        text: "Portefolio: Création de ce site en HTML5/CSS3/Tailwind CSS.",
-        imagePath: "assets/photos/site.webp",
-        imageAlt: "Image de mon site actuellement"
+        id: 2,
+        title: "Application Mobile",
+        subtitle: "JAN 2025",
+        text: "MarmotMonitor: gestion des premiers jours d'un enfant.",
+        imagePath: "assets/photos/marmotMonitorApp.webp",
+        imageAlt: "Image de MarmotMonitor",
+        technologies: [
+            {
+                src: "assets/photos/icone/icone_swiftui.webp",
+                alt: "Logo SWIFTUI"
+            },
+        ],
+        overlayTitle: "MarmotMonitor",
+        overlayText: "Application iOS pour aider les nouveaux parents à suivre et gérer les soins quotidiens de leur nouveau-né.",
+        overlayInfo: ["Suivi des repas, du sommeil et des changes",
+            "Graphiques d'évolution du poids et de la taille",
+            "Tableau de bord journalier avec synthèse des activités",
+            "Interface intuitive et adaptée à l'usage quotidien"
+        ]
+    },
+    {
+        id: 3,
+        title: "Jeu d'Aventure Java",
+        subtitle: "JUIN 2025",
+        text: "JavaQuest: jeu d'aventure développé en Java avec JavaFX",
+        imagePath: "assets/photos/javaquest.webp",
+        imageAlt: "Image de JavaQuest",
+        technologies: [
+            {
+                src: "assets/photos/icone/icone_java.webp",
+                alt: "Logo Java"
+            },
+        ],
+        overlayTitle: "JavaQuest",
+        overlayText: "Jeu d'aventure développé en Java durant ma formation au Campus Numérique in the Alps. Le joueur incarne un guerrier (Warrior ou Wizard) qui doit atteindre le coffre aux trésors en affrontant des créatures ennemies et en récupérant des équipements.",
+        overlayInfo: ["Choix de classe de personnage avec capacités uniques",
+            "Système de combat contre dragons, gobelins et orcs",
+            "Gestion d'inventaire et d'équipements",
+            "Sauvegarde de progression via base de données H2",
+            "Technologies : Java 17, JavaFX 21, Maven"
+        ],
     }
 ]
 
@@ -28,83 +84,6 @@ export function SectionProjet() {
                     <ProjectCard key={project.id}
                         project={project} />
                 ))}
-
-                <li class="project-card-base ">
-                    <div class="project-card-content">
-                        <h3 class="project-card-title">Site internet</h3>
-                        <p class="project-card-subtitle">New</p>
-                        <p class="project-card-text">Portefolio: Création de ce site en HTML5/CSS3/Tailwind CSS.</p>
-                        <img src="assets/photos/site.webp" class="project-image" alt="Image de mon site actuellement" loading="lazy" />
-                        <div class="project-card-icones">
-                            <img class="project-icon-tech" src="assets/photos/icone/icone_html.webp" alt="Logo HTML5" loading="lazy" />
-                            <img class="project-icon-tech" src="assets/photos/icone/icone_css.webp" alt="Logo CSS" loading="lazy" />
-                            <img class="project-icon-tech" src="assets/photos/icone/icone_tailwind.webp" alt="Logo Tailwind CSS" loading="lazy" />
-                        </div>
-                    </div>
-
-                    <div class="card-overlay">
-                        <h4 class="project-overlay-title">Portfolio Personnel</h4>
-                        <p class="project-overlay-text">Portfolio conçu avec un design minimaliste inspiré d'Apple pour présenter mes projets et compétences en développement web.</p>
-                        <ul class="project-overlay-features">
-                            <li>Responsive design (Tailwind CSS)</li>
-                            <li>Interface utilisateur épurée et intuitive</li>
-                            <li>Animations CSS pour une meilleure expérience</li>
-                            <li>Structure sémantique SEO-friendly</li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="project-card-base">
-                    <div class="project-card-content">
-                        <h3 class="project-card-title">Application Mobile</h3>
-                        <p class="project-card-subtitle">JAN 2025</p>
-                        <p class="project-card-text">MarmotMonitor: gestion des premiers jours d'un enfant</p>
-                        <img src="assets/photos/marmotMonitorApp.webp" class="project-image" alt="Image de MarmotMonitor" loading="lazy" />
-
-                        <div class="project-card-icones">
-                            <img class="project-icon-tech col-span-1" src="assets/photos/icone/icone_swiftui.webp" alt="SwiftUI icon" loading="lazy" />
-                            <div class="flex justify-center col-span-2">
-                                <img class="project-icon-tech" src="assets/photos/appstore.webp" alt="Swift icon" loading="lazy" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-overlay">
-                        <h4 class="project-overlay-title">MarmotMonitor</h4>
-                        <p class="project-overlay-text">Application iOS pour aider les nouveaux parents à suivre et gérer les soins quotidiens de leur nouveau-né.</p>
-                        <ul class="project-overlay-features">
-                            <li>Suivi des repas, du sommeil et des changes</li>
-                            <li>Graphiques d'évolution du poids et de la taille</li>
-                            <li>Tableau de bord journalier avec synthèse des activités</li>
-                            <li>Interface intuitive et adaptée à l'usage quotidien</li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="project-card-base">
-                    <div class="project-card-content">
-                        <h2 class="project-card-title">Application Mobile</h2>
-                        <p class="project-card-subtitle">2023</p>
-                        <p class="project-card-text">Reciplease: application de recette de cuisine</p>
-
-                        <img src="assets/photos/reciplease.webp" class="project-image" alt="Image de Reciplease" loading="lazy" />
-
-                        <div class="project-card-icones">
-                            <div></div>
-                            <img class="project-icon-tech" src="assets/photos/icone/icone_swift.webp" alt="Swift icon" loading="lazy" />
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="card-overlay">
-                        <h3 class="project-overlay-title">Reciplease</h3>
-                        <p class="project-overlay-text">Application iOS permettant de découvrir des recettes de cuisine en fonction des ingrédients disponibles dans votre réfrigérateur.</p>
-                        <ul class="project-overlay-features">
-                            <li>Recherche de recettes par ingrédients</li>
-                            <li>Filtres diététiques (végétarien, sans gluten, etc.)</li>
-                            <li>Sauvegarde des recettes favorites</li>
-                            <li>Interface élégante avec photos haute résolution</li>
-                        </ul>
-                    </div>
-                </li>
             </ul>
         </section>
     )
