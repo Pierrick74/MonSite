@@ -5,6 +5,7 @@ import { Link } from 'lucide-react'
 import { Header } from './components/section/header';
 import { Description } from './components/section/description';
 import { SectionProjet } from './components/section/project';
+import { SlideLogo } from './components/slide_logo';
 
 const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -26,6 +27,8 @@ function App() {
                 <SectionProjet />
                 <section id="Competences" class="h-full w-screen items-center mt-20">
                     <h2 class="section-title">Compétences</h2>
+
+                    <SlideLogo />
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-5 2xl:p-30 mx-5">
                         <div class="">
                             <h3 class="competances-title">Web<div class="cercleFill"></div></h3>
