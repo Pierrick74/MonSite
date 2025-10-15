@@ -1,16 +1,69 @@
+import { motion } from 'framer-motion';
 
 export function ParcoursCard({ parcours }) {
     return (
-        <div class="timeline-content">
-            <p class="timeline-date">{parcours.date}</p>
-            <h3 class="timeline-title timeline-animate">{parcours.metier}</h3>
-            <p class="timeline-subtitle timeline-animate">{parcours.entreprise}</p>
-            <p class="timeline-description timeline-animate">{parcours.description}</p>
-            <div class="mt-2 flex flex-wrap gap-2">
+        <div className="timeline-content">
+            <motion.p
+                className="timeline-date"
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: false }}
+            >
+                {parcours.date}
+            </motion.p>
+
+            <motion.h3
+                className="timeline-title"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: false }}
+            >
+                {parcours.metier}
+            </motion.h3>
+
+            <motion.p
+                className="timeline-subtitle"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 1 }}
+                viewport={{ once: false }}
+            >
+                {parcours.entreprise}
+            </motion.p>
+
+            <motion.p
+                className="timeline-description"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                viewport={{ once: false }}
+            >
+                {parcours.description}
+            </motion.p>
+
+            <motion.div
+                className="mt-2 flex flex-wrap gap-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: false }}
+            >
                 {parcours.skills.map((skill, index) => (
-                    <span key={index} class="parcours-badge">{skill}</span>
+                    <motion.span
+                        key={index}
+                        className="parcours-badge"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: 0.5 + (index * 0.05) }}
+                        viewport={{ once: false }}
+                        whileHover={{ scale: 1.1 }}
+                    >
+                        {skill}
+                    </motion.span>
                 ))}
-            </div>
+            </motion.div>
         </div>
-    )
+    );
 }
