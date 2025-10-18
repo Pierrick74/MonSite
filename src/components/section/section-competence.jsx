@@ -20,23 +20,25 @@ const competences = [
 
 export function SectionCompetence() {
     return (
-        <section id="Competences" class="h-full w-screen items-center mt-20">
-            <h2 class="section-title">Compétences</h2>
+        <section id="Competences" className="h-full w-screen items-center mt-20 pb-20 bg-[#F5F5F7]">
+            <h2 className="section-title-competence">Compétences</h2>
 
             <SlideLogo />
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-5 2xl:p-30 mx-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-8 py-24 max-w-7xl mx-auto">
                 {competences.map((comp, index) => (
-                    <div key={index}>
-                        <h3 class="competances-title">{comp.titre}</h3>
-                        <p class="competances-corps">
+                    <div key={index} className="flex flex-col gap-4 bg-[#FFF] rounded-xl p-4 shadow-sm">
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight text-black">
+                            {comp.titre}
+                        </h3>
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                             {comp.technologies.map((tech, i) => (
                                 <span key={i}>
                                     {tech}
-                                    {i < comp.technologies.length - 1 && <em> / </em>}
+                                    {i < comp.technologies.length - 1 && <span> / </span>}
                                 </span>
                             ))}
                         </p>
-                        <p class="competances-corps">
+                        <p className="text-base md:text-lg text-gray-500 leading-relaxed">
                             {comp.contexte}
                         </p>
                     </div>
