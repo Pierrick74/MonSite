@@ -7,6 +7,16 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+};
+
 export function SectionMenu() {
     return (
         <DropdownMenu>
