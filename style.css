@@ -64,6 +64,10 @@
   @apply px-5 pt-5 text-xl leading-tight font-bold tracking-tight lg:text-4xl xl:text-5xl;
 }
 
+.section-title-competence {
+  @apply px-5 pt-20 pb-16 text-xl leading-tight font-bold tracking-tight lg:text-4xl xl:text-5xl;
+}
+
 .competances-title {
   @apply flex items-center text-base leading-snug font-semibold tracking-tight text-zinc-500 lg:text-xl xl:text-xl 2xl:text-2xl;
 }
