@@ -1,4 +1,5 @@
 import { ProjectCard } from "../projectCard"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const PROJECTS = [
     {
@@ -8,20 +9,7 @@ const PROJECTS = [
         text: "Portefolio: Création de ce site en HTML5/CSS3/Tailwind CSS.",
         imagePath: "assets/photos/site.webp",
         imageAlt: "Image de mon site actuellement",
-        technologies: [
-            {
-                src: "assets/photos/icone/icone_html.webp",
-                alt: "Logo HTML5"
-            },
-            {
-                src: "assets/photos/icone/icone_react.webp",
-                alt: "Logo React"
-            },
-            {
-                src: "assets/photos/icone/icone_tailwind.webp",
-                alt: "Logo Tailwind CSS"
-            }
-        ],
+        technologies: ["React", "Tailwind CSS"],
         overlayTitle: "Portfolio Personnel",
         overlayText: "Portfolio conçu avec un design minimaliste inspiré d'Apple pour présenter mes projets et compétences en développement web.",
         overlayInfo: ["Responsive design (Tailwind CSS)",
@@ -37,12 +25,7 @@ const PROJECTS = [
         text: "MarmotMonitor: gestion des premiers jours d'un enfant.",
         imagePath: "assets/photos/marmotMonitorApp.webp",
         imageAlt: "Image de MarmotMonitor",
-        technologies: [
-            {
-                src: "assets/photos/icone/icone_swiftui.webp",
-                alt: "Logo SWIFTUI"
-            },
-        ],
+        technologies: ["SWIFTUI"],
         overlayTitle: "MarmotMonitor",
         overlayText: "Application iOS pour aider les nouveaux parents à suivre et gérer les soins quotidiens de leur nouveau-né.",
         overlayInfo: ["Suivi des repas, du sommeil et des changes",
@@ -58,12 +41,7 @@ const PROJECTS = [
         text: "JavaQuest: jeu d'aventure développé en Java avec JavaFX",
         imagePath: "assets/photos/javaquest.webp",
         imageAlt: "Image de JavaQuest",
-        technologies: [
-            {
-                src: "assets/photos/icone/icone_java.webp",
-                alt: "Logo Java"
-            },
-        ],
+        technologies: ["Logo Java"],
         overlayTitle: "JavaQuest",
         overlayText: "Jeu d'aventure développé en Java durant ma formation au Campus Numérique in the Alps. Le joueur incarne un guerrier (Warrior ou Wizard) qui doit atteindre le coffre aux trésors en affrontant des créatures ennemies et en récupérant des équipements.",
         overlayInfo: ["Choix de classe de personnage avec capacités uniques",
@@ -78,13 +56,31 @@ const PROJECTS = [
 export function SectionProjet() {
     return (
         <section id="projects" class="h-full w-screen items-center mt-20">
-            <h2 class="section-title">Projects Personnels</h2>
+            <h2 class="section-title pb-12">Projects Personnels</h2>
             <ul class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-7 md:gap-10 lg:gap-20 2xl:gap-40 justify-items-center px-5 2xl:px-30">
                 {PROJECTS.map(project => (
                     <ProjectCard key={project.id}
                         project={project} />
                 ))}
             </ul>
+            <div className="m-6">
+                <Tabs defaultValue="account" className=" bg-[#F5F5F7] p-4">
+                    <TabsList>
+                        <TabsTrigger value="account" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight text-black" >WEB</TabsTrigger>
+                        <TabsTrigger value="password" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7]">Mobile</TabsTrigger>
+                        <TabsTrigger value="java" className=" grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7]">Java</TabsTrigger>
+                    </TabsList>
+                    <TabsContent value="account">
+                        <ProjectCard project={PROJECTS[0]} />
+                    </TabsContent>
+                    <TabsContent value="password">
+                        <ProjectCard project={PROJECTS[1]} />
+                    </TabsContent>
+                    <TabsContent value="java">
+                        <ProjectCard project={PROJECTS[2]} />
+                    </TabsContent>
+                </Tabs>
+            </div>
         </section>
     )
 }
