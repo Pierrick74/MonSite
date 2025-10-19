@@ -7,11 +7,11 @@ export function ContactBtn() {
     }
 
     return (
-        <a class="fancy" href="#Contact">
+        <span class="fancy">
             <span class="top-key"></span>
-            <a href="#" onClick={(e) => { e.preventDefault(); makeEmail(); }}><span class="text">me contacter</span></a>
+            <a href="#Contact" onClick={(e) => { e.preventDefault(); makeEmail(); }}><span class="text">me contacter</span></a>
             <span class="bottom-key-1"></span>
             <span class="bottom-key-2"></span>
-        </a>
+        </span>
     )
 }
