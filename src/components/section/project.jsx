@@ -70,7 +70,7 @@ export function SectionProjet() {
                         <TabsTrigger value="password" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7]">Mobile</TabsTrigger>
                         <TabsTrigger value="java" className=" grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7]">Java</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="account">
+                    <TabsContent value="account" className="flex justify-center">
                         <ProjectCard project={PROJECTS[0]} />
                     </TabsContent>
                     <TabsContent value="password">
