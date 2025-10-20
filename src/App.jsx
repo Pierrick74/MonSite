@@ -32,7 +32,6 @@ function App() {
                 <Parcours />
             </main>
             <Footer />
-            <script src="animation.js"></script>
         </div >
     )
 }

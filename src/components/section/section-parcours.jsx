@@ -1,4 +1,4 @@
-import { ParcoursCard } from "../parcoursCards"
+import { ParcoursCard } from "../ParcoursCards"
 
 const parcoursData = [
     {
