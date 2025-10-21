@@ -37,11 +37,7 @@
 }
 
 .card-overlay {
-  @apply absolute inset-0 flex h-full w-full translate-y-full flex-col justify-center bg-black/90 p-6 text-white opacity-0 transition-all duration-400 ease-in-out;
-}
-
-.project-card-base:hover .card-overlay {
-  @apply translate-y-0 opacity-100;
+  @apply flex my-5 flex-col rounded-2xl bg-black/90 p-6 text-white;
 }
 
 .project-overlay-title {

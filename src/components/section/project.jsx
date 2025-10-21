@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ProjectCard } from "../projectCard"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -54,30 +55,27 @@ const PROJECTS = [
 ]
 
 export function SectionProjet() {
+    const [activeTab, setActiveTab] = useState("account");
+
     return (
         <section id="projects" class="h-full w-screen items-center mt-20">
-            <h2 class="section-title pb-12">Projects</h2>
-            <ul class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-7 md:gap-10 lg:gap-20 2xl:gap-40 justify-items-center px-5 2xl:px-30">
-                {PROJECTS.map(project => (
-                    <ProjectCard key={project.id}
-                        project={project} />
-                ))}
-            </ul>
+            <h2 class="section-title ">Projects</h2>
+            <p className="text-justify pb-12 m-6 lg:text-lg 2xl:text-xl xl:my-5 text-zinc-500 font-normal tracking-normal leading-relaxed">Voici quelques exemples de réalisation, vous trouverez plus sur mon GITHUB</p>
             <div className="m-6">
-                <Tabs defaultValue="account" className=" bg-[#F5F5F7] p-4 rounded-xl">
+                <Tabs value={activeTab} onValueChange={setActiveTab} className=" bg-[#F5F5F7] p-4 rounded-xl">
                     <TabsList>
-                        <TabsTrigger value="account" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight text-black" >WEB</TabsTrigger>
-                        <TabsTrigger value="password" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7]">Mobile</TabsTrigger>
-                        <TabsTrigger value="java" className=" grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7]">Java</TabsTrigger>
+                        <TabsTrigger value="account" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black" >Web</TabsTrigger>
+                        <TabsTrigger value="password" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black">Mobile</TabsTrigger>
+                        <TabsTrigger value="java" className=" grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black">Java</TabsTrigger>
                     </TabsList>
                     <TabsContent value="account" className="flex justify-center">
-                        <ProjectCard project={PROJECTS[0]} />
+                        <ProjectCard key={`web-${activeTab}`} project={PROJECTS[0]} />
                     </TabsContent>
-                    <TabsContent value="password">
-                        <ProjectCard project={PROJECTS[1]} />
+                    <TabsContent value="password" className="flex justify-center">
+                        <ProjectCard key={`mobile-${activeTab}`} project={PROJECTS[1]} />
                     </TabsContent>
-                    <TabsContent value="java">
-                        <ProjectCard project={PROJECTS[2]} />
+                    <TabsContent value="java" className="flex justify-center">
+                        <ProjectCard key={`java-${activeTab}`} project={PROJECTS[2]} />
                     </TabsContent>
                 </Tabs>
             </div>
