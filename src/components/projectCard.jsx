@@ -18,7 +18,7 @@ export function ProjectCard({ project }) {
                 <p className="text-base md:text-lg text-gray-500 leading-relaxed">{project.subtitle}</p>
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed project-card-text">{project.text}</p>
                 <img src={project.imagePath} className="project-image" alt={project.imageAlt} loading="lazy" />
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                     <div className="mt-2 flex flex-wrap gap-2">
                         {project.technologies.map((tech, index) => (
                             <p
@@ -30,10 +30,17 @@ export function ProjectCard({ project }) {
                         ))}
 
                     </div>
-                    <Button className="rounded-full bg-neutral-950 w-10 h-10 text-white text-3xl" onClick={toggleDetail}>{isShowDetail ? '-' : '+'}</Button>
+                    <Button
+                        className="rounded-full bg-neutral-950 w-10 h-10 text-white text-3xl transition-all hover:scale-105 flex-shrink-0"
+                        onClick={toggleDetail}
+                        aria-label={isShowDetail ? "Masquer les détails du projet" : "Afficher les détails du projet"}
+                        aria-expanded={isShowDetail}
+                    >
+                        {isShowDetail ? '-' : '+'}
+                    </Button>
                 </div>
-                {isShowDetail &&
 
+                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isShowDetail ? 'max-h-[800px] opacity-100 mt-5' : 'max-h-0 opacity-0'}`}>
                     <div className="card-overlay">
                         <h4 className="project-overlay-title">{project.overlayTitle}</h4>
                         <p className="project-overlay-text">{project.overlayText}</p>
@@ -42,7 +49,8 @@ export function ProjectCard({ project }) {
                                 <li key={index}>{info}</li>
                             ))}
                         </ul>
-                    </div>}
+                    </div>
+                </div>
             </li>
         </div>
     )
