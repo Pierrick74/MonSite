@@ -60,24 +60,26 @@ export function SectionProjet() {
     return (
         <section id="projects" class="h-full w-screen items-center mt-20">
             <h2 class="section-title ">Projects</h2>
-            <p className="text-justify pb-12 m-6 lg:text-lg 2xl:text-xl xl:my-5 text-zinc-500 font-normal tracking-normal leading-relaxed">Voici quelques exemples de réalisation, vous trouverez plus sur mon GITHUB</p>
-            <div className="m-6">
-                <Tabs value={activeTab} onValueChange={setActiveTab} className=" bg-[#F5F5F7] p-4 rounded-xl">
-                    <TabsList>
-                        <TabsTrigger value="account" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black" >Web</TabsTrigger>
-                        <TabsTrigger value="password" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black">Mobile</TabsTrigger>
-                        <TabsTrigger value="java" className=" grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black">Java</TabsTrigger>
-                    </TabsList>
-                    <TabsContent value="account" className="flex justify-center">
-                        <ProjectCard key={`web-${activeTab}`} project={PROJECTS[0]} />
-                    </TabsContent>
-                    <TabsContent value="password" className="flex justify-center">
-                        <ProjectCard key={`mobile-${activeTab}`} project={PROJECTS[1]} />
-                    </TabsContent>
-                    <TabsContent value="java" className="flex justify-center">
-                        <ProjectCard key={`java-${activeTab}`} project={PROJECTS[2]} />
-                    </TabsContent>
-                </Tabs>
+            <p className="text-justify mx-6 pt-2 pb-4 lg:text-lg 2xl:text-xl xl:my-5 text-zinc-500 font-normal tracking-normal leading-relaxed">Voici quelques exemples de réalisation, vous trouverez plus sur mon GITHUB</p>
+            <div className="flex justify-center">
+                <div className=" mx-6 xl:mx-20 max-w-4xl">
+                    <Tabs value={activeTab} onValueChange={setActiveTab} className=" bg-[#F5F5F7] p-4 rounded-xl">
+                        <TabsList>
+                            <TabsTrigger value="account" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black" >Web</TabsTrigger>
+                            <TabsTrigger value="password" className="  grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black">Mobile</TabsTrigger>
+                            <TabsTrigger value="java" className=" grid grid-cols-4 bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black">Java</TabsTrigger>
+                        </TabsList>
+                        <TabsContent value="account" className="flex justify-center">
+                            <ProjectCard key={`web-${activeTab}`} project={PROJECTS[0]} />
+                        </TabsContent>
+                        <TabsContent value="password" className="flex justify-center">
+                            <ProjectCard key={`mobile-${activeTab}`} project={PROJECTS[1]} />
+                        </TabsContent>
+                        <TabsContent value="java" className="flex justify-center">
+                            <ProjectCard key={`java-${activeTab}`} project={PROJECTS[2]} />
+                        </TabsContent>
+                    </Tabs>
+                </div>
             </div>
         </section>
     )
