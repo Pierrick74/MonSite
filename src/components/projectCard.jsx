@@ -16,7 +16,7 @@ export function ProjectCard({ project }) {
 
                 <h3 className="text-xl md:text-xl lg:text-2xl font-bold leading-tight tracking-tight text-black">{project.title}</h3>
                 <p className="text-base md:text-lg text-gray-500 leading-relaxed">{project.subtitle}</p>
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxedproject-card-text">{project.text}</p>
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed project-card-text">{project.text}</p>
                 <img src={project.imagePath} className="project-image" alt={project.imageAlt} loading="lazy" />
                 <div className="flex justify-between">
                     <div className="mt-2 flex flex-wrap gap-2">
