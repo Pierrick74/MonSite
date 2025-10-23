@@ -52,6 +52,10 @@
   @apply list-disc px-5 text-justify text-lg 2xl:text-xl;
 }
 
+.section-spacing {
+  @apply mt-20 mb-20
+}
+
 .section-title {
   @apply px-5 pt-5 text-xl leading-tight font-bold tracking-tight lg:text-4xl xl:text-5xl;
 }

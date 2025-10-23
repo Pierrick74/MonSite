@@ -20,7 +20,7 @@ const competences = [
 
 export function SectionCompetence() {
     return (
-        <section id="Competences" className="h-full w-screen items-center mt-20 pb-20 bg-[#F5F5F7]">
+        <section id="Competences" className="h-full items-center section-spacing bg-[#F5F5F7]">
             <h2 className="section-title-competence">Compétences</h2>
 
             <SlideLogo />

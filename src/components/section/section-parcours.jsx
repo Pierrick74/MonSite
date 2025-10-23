@@ -28,7 +28,7 @@ const parcoursData = [
 
 export function Parcours() {
     return (
-        <section id="parcours" class="h-full w-screen items-center mt-20">
+        <section id="parcours" class="h-full items-center section-spacing">
             <h2 class="section-title">Parcours Professionnel</h2>
             <div class="relative max-w-6xl mx-auto py-5 p-3">
                 <ul class="timeline-list">
