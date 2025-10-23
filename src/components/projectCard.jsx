@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button"
 
 export function ProjectCard({ project }) {
     const [isShowDetail, setShowDetail] = useState(false);
@@ -30,14 +29,30 @@ export function ProjectCard({ project }) {
                         ))}
 
                     </div>
-                    <Button
-                        className="rounded-full bg-neutral-950 w-10 h-10 text-white text-3xl transition-all hover:scale-105 flex-shrink-0"
+                    <button
+                        className="rounded-full bg-neutral-950 w-10 h-10 text-white transition-all hover:scale-105 flex-shrink-0 flex items-center justify-center p-0 border-0"
                         onClick={toggleDetail}
                         aria-label={isShowDetail ? "Masquer les détails du projet" : "Afficher les détails du projet"}
                         aria-expanded={isShowDetail}
                     >
-                        {isShowDetail ? '-' : '+'}
-                    </Button>
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="transition-transform duration-200"
+                        >
+                            {isShowDetail ? (
+                                <line x1="4" y1="10" x2="16" y2="10" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                            ) : (
+                                <>
+                                    <line x1="10" y1="4" x2="10" y2="16" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                                    <line x1="4" y1="10" x2="16" y2="10" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                                </>
+                            )}
+                        </svg>
+                    </button>
                 </div>
 
                 <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isShowDetail ? 'max-h-[800px] opacity-100 mt-5' : 'max-h-0 opacity-0'}`}>
