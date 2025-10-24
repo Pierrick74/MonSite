@@ -1,12 +1,9 @@
-import { SectionMenu } from './section-menu';
-
+import { Navbar } from '../navbar';
 
 export function Header() {
     return (
         <header>
-            <div className="m-6">
-                <SectionMenu />
-            </div>
-        </header >
+            <Navbar />
+        </header>
     )
 }
