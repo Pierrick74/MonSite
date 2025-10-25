@@ -3,7 +3,7 @@ import { ContactBtn } from '../ui/contact-button';
 export function Description() {
     return <section id="Description" className="items-center">
         <div
-            className="flex h-screen w-full items-end justify-items-end bg-[url(/assets/photos/img_profile.webp)] bg-size-[70vh] bg-fixed bg-center bg-no-repeat md:bg-size-[85vh] md:bg-bottom-right lg:bg-size-[80vh]">
+            className="flex w-full h-[94vh] items-end justify-items-end bg-[url(/assets/photos/img_profile.webp)] bg-size-[70vh] bg-fixed bg-center bg-no-repeat md:bg-size-[85vh] md:bg-bottom-right lg:bg-size-[80vh]">
             <div className="bg-zinc-50 p-3 rounded-t-1g xl:w-1/2 px-5 pt-5">
                 <p className="uppercase md:text-lg xl:text-2xl xl:my-2 2xl:text-3xl text-zinc-600 font-medium tracking-normal leading-normal">Pierrick VIRET</p>
                 <h2 className="xl:my-4 text-xl tracking-tight leading-tight font-bold lg:text-4xl xl:text-5xl ">Développeur Web et mobile</h2>
