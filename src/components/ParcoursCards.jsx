@@ -8,7 +8,7 @@ export function ParcoursCard({ parcours }) {
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
             >
                 {parcours.date}
             </motion.p>
@@ -18,7 +18,7 @@ export function ParcoursCard({ parcours }) {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
             >
                 {parcours.metier}
             </motion.h3>
@@ -28,7 +28,7 @@ export function ParcoursCard({ parcours }) {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
             >
                 {parcours.entreprise}
             </motion.p>
@@ -38,7 +38,7 @@ export function ParcoursCard({ parcours }) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
             >
                 {parcours.description}
             </motion.p>
@@ -48,7 +48,7 @@ export function ParcoursCard({ parcours }) {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
             >
                 {parcours.skills.map((skill, index) => (
                     <motion.span
@@ -57,7 +57,7 @@ export function ParcoursCard({ parcours }) {
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: 0.5 + (index * 0.05) }}
-                        viewport={{ once: false }}
+                        viewport={{ once: true }}
                         whileHover={{ scale: 1.1 }}
                     >
                         {skill}

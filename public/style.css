@@ -33,7 +33,7 @@
 }
 
 .project-image {
-  @apply my-3 mx-auto rounded-lg object-cover;
+  @apply mx-auto my-3 rounded-lg object-cover;
 }
 
 .project-card-base {
