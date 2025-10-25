@@ -71,11 +71,11 @@ export function SectionProjet() {
             <p className="text-justify mx-6 pt-2 pb-4 lg:text-lg 2xl:text-xl xl:my-5 text-zinc-500 font-normal tracking-normal leading-relaxed">Voici quelques exemples de réalisations, retrouvez-en plus sur mon GitHub</p>
             <div className="flex justify-center">
                 <div className="mx-6 xl:mx-20 xl:max-w-4xl xl:w-full">
-                    <Tabs value={activeTab} onValueChange={setActiveTab} className=" bg-[#F5F5F7] p-4 rounded-xl">
+                    <Tabs value={activeTab} onValueChange={setActiveTab} className=" bg-[#F5F5F7] p-3 xl:p-8 rounded-xl border">
                         <TabsList className="grid grid-cols-3 gap-2">
-                            <TabsTrigger value="web" className=" bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black" >Web</TabsTrigger>
-                            <TabsTrigger value="mobile" className=" bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black">Mobile</TabsTrigger>
-                            <TabsTrigger value="java" className=" bg-[#FFF] data-[state=active]:bg-[#F5F5F7] text-xl md:text-1xl lg:text-2xl text-center leading-tight tracking-tight text-black">Java</TabsTrigger>
+                            <TabsTrigger value="web" className=" project-tabs-trigger" >Web</TabsTrigger>
+                            <TabsTrigger value="mobile" className="project-tabs-trigger">Mobile</TabsTrigger>
+                            <TabsTrigger value="java" className=" project-tabs-trigger">Java</TabsTrigger>
                         </TabsList>
                         <TabsContent value="web" className="flex justify-center data-[state=inactive]:hidden">
                             <ProjectCard project={PROJECTS[0]} />

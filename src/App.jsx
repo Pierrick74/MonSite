@@ -1,7 +1,7 @@
 
 import { Header } from './components/section/header';
 import { Description } from './components/section/description';
-import { SectionProjet } from './components/section/project';
+import { SectionProjet } from './components/section/section-project';
 import { SectionCompetence } from './components/section/section-competence';
 import { Parcours } from './components/section/section-parcours';
 import { Footer } from './components/section/Footer';

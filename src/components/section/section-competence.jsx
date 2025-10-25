@@ -26,7 +26,7 @@ export function SectionCompetence() {
             <SlideLogo />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-8 py-24 max-w-7xl mx-auto">
                 {competences.map((comp, index) => (
-                    <div key={index} className="flex flex-col gap-4 bg-[#FFF] rounded-xl p-4 shadow-sm">
+                    <div key={index} className="flex flex-col gap-4 bg-[#FFF] rounded-xl p-4 shadow-sm border rounded-xl">
                         <h3 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight text-black">
                             {comp.titre}
                         </h3>
