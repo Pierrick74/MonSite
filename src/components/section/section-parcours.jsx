@@ -28,13 +28,13 @@ const parcoursData = [
 
 export function Parcours() {
     return (
-        <section id="parcours" class="h-full items-center section-spacing">
-            <h2 class="section-title">Parcours Professionnel</h2>
-            <div class="relative max-w-6xl mx-auto py-5 p-3">
-                <ul class="timeline-list">
+        <section id="parcours" className="h-full items-center section-spacing">
+            <h2 className="section-title">Parcours Professionnel</h2>
+            <div className="relative max-w-6xl mx-auto py-5 p-3">
+                <ul className="timeline-list">
                     {parcoursData.map((parcours, index) => (
-                        <li class="timeline-item" key={index}>
-                            <div class="timeline-marker"></div>
+                        <li className="timeline-item" key={index}>
+                            <div className="timeline-marker"></div>
                             <ParcoursCard parcours={parcours} />
                         </li>
                     ))}

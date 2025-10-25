@@ -29,7 +29,7 @@ export function ProjectCard({ project }) {
 
                     </div>
                     <button
-                        className="rounded-full bg-neutral-950 w-10 h-10 text-white transition-all hover:scale-105 flex-shrink-0 flex items-center justify-center p-0 border-0"
+                        className="rounded-full bg-neutral-950 w-10 h-10 text-white transition-all hover:scale-105 flex-shrink-0 flex items-center justify-center p-0 border-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
                         onClick={toggleDetail}
                         aria-label={isShowDetail ? "Masquer les détails du projet" : "Afficher les détails du projet"}
                         aria-expanded={isShowDetail}

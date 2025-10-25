@@ -42,7 +42,7 @@ export function Navbar() {
                             <button
                                 key={item.id}
                                 onClick={() => scrollToSection(item.id)}
-                                className="text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors duration-200 px-3 py-2 text-lg lg:text-xl xl:text-2xl font-medium"
+                                className="text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors duration-200 px-3 py-2 text-lg lg:text-xl xl:text-2xl font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 focus-visible:rounded-md"
                             >
                                 {item.label}
                             </button>
@@ -52,7 +52,7 @@ export function Navbar() {
                     {/* Menu Mobile */}
                     <div className="md:hidden bg-white">
                         <DropdownMenu>
-                            <DropdownMenuTrigger className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+                            <DropdownMenuTrigger className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2">
                                 <span className="sr-only">Ouvrir le menu</span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
