@@ -4,6 +4,10 @@
   @apply text-lg text-zinc-300 md:text-zinc-900 xl:text-xl;
 }
 
+.project-tabs-trigger {
+  @apply bg-[#FFF] text-center text-xl leading-tight tracking-tight text-black data-[state=active]:scale-110 data-[state=active]:border-b-2 data-[state=active]:border-black data-[state=active]:bg-[#F5F5F7] data-[state=active]:font-bold md:text-xl lg:text-2xl;
+}
+
 .project-card-content {
   @apply flex h-full w-full flex-col justify-between p-3 text-zinc-50;
 }
@@ -29,23 +33,15 @@
 }
 
 .project-image {
-  @apply my-3 rounded-lg object-cover;
+  @apply mx-auto my-3 rounded-lg object-cover;
 }
 
 .project-card-base {
-  @apply relative mt-5 overflow-hidden rounded-lg bg-zinc-900 transition-all duration-300 ease-in-out;
-}
-
-.project-card-base:hover {
-  @apply -translate-y-1 shadow-2xl;
+  @apply mt-5 list-none;
 }
 
 .card-overlay {
-  @apply absolute inset-0 flex h-full w-full translate-y-full flex-col justify-center bg-black/90 p-6 text-white opacity-0 transition-all duration-400 ease-in-out;
-}
-
-.project-card-base:hover .card-overlay {
-  @apply translate-y-0 opacity-100;
+  @apply my-5 flex flex-col rounded-2xl bg-black/90 p-6 text-white;
 }
 
 .project-overlay-title {
@@ -58,6 +54,10 @@
 
 .project-overlay-features {
   @apply list-disc px-5 text-justify text-lg 2xl:text-xl;
+}
+
+.section-spacing {
+  @apply mt-20 mb-20;
 }
 
 .section-title {
@@ -89,7 +89,7 @@
 }
 
 .contact-btn {
-  @apply m-1 rounded-xl border border-zinc-900 px-4 py-1 hover:bg-zinc-900 hover:text-zinc-50;
+  @apply m-1 w-40 rounded-xl border border-zinc-900 px-4 py-1 text-center hover:bg-zinc-900 hover:text-zinc-50 focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 focus-visible:outline-none;
 }
 
 body {
@@ -276,4 +276,20 @@ body {
 .fancy:hover .bottom-key-2 {
   right: 0;
   width: 0;
+}
+
+/* Focus visible pour accessibilité clavier */
+.fancy a:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.fancy:has(a:focus-visible) {
+  background: black;
+  color: white;
+}
+
+.fancy:has(a:focus-visible) .text {
+  color: white;
 }

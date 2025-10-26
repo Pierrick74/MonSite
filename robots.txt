@@ -1,1 +1,42 @@
+# robots.txt pour www.pierrickviret.fr
+# Dernière mise à jour: 2025-01-25
+
+# Autoriser tous les robots de recherche
+User-agent: *
+Allow: /
+
+# Bloquer l'indexation des dossiers techniques
+Disallow: /dist/
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /public/
+
+# Bloquer les fichiers de configuration
+Disallow: /*.json$
+Disallow: /*.config.js$
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Autoriser explicitement les ressources importantes
+Allow: /assets/
+Allow: /public/assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+
+# Sitemap XML
 Sitemap: https://www.pierrickviret.fr/sitemap.xml
+
+# Crawl-delay pour éviter la surcharge (optionnel)
+# Crawl-delay: 1
+
+# Règles spécifiques pour certains bots (optionnel)
+# User-agent: Googlebot
+# Allow: /
+
+# User-agent: Bingbot
+# Allow: /

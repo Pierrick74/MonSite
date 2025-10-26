@@ -2,18 +2,18 @@ import { useEffect, useRef } from 'react';
 
 export const SlideLogo = () => {
     const logos = [
-        { src: "assets/photos/icone/icone_html.webp", alt: "HTML5" },
-        { src: "assets/photos/icone/icone_react_W.webp", alt: "React" },
-        { src: "assets/photos/icone/icone_tailwind_B.webp", alt: "Tailwind CSS" },
-        { src: "assets/photos/icone/icone_css.webp", alt: "CSS3" },
-        { src: "assets/photos/icone/icone_php.webp", alt: "PHP" },
-        { src: "assets/photos/icone/icone_laravel.webp", alt: "Laravel" },
-        { src: "assets/photos/icone/icone_python.webp", alt: "Python" },
-        { src: "assets/photos/icone/icone_java.webp", alt: "Java" },
-        { src: "assets/photos/icone/icone_boostrap.webp", alt: "Boostrap" },
-        { src: "assets/photos/icone/icone_flutter.webp", alt: "Flutter" },
-        { src: "assets/photos/icone/icone_swift.webp", alt: "Swift" },
-        { src: "assets/photos/icone/icone_swiftui.webp", alt: "SwiftUI" },
+        { src: "assets/photos/icone/icone_html.webp", alt: "Logo HTML5" },
+        { src: "assets/photos/icone/icone_react_W.webp", alt: "Logo React" },
+        { src: "assets/photos/icone/icone_tailwind_B.webp", alt: "Logo Tailwind CSS" },
+        { src: "assets/photos/icone/icone_css.webp", alt: "Logo CSS3" },
+        { src: "assets/photos/icone/icone_php.webp", alt: "Logo PHP" },
+        { src: "assets/photos/icone/icone_laravel.webp", alt: "Logo Laravel" },
+        { src: "assets/photos/icone/icone_python.webp", alt: "Logo Python" },
+        { src: "assets/photos/icone/icone_java.webp", alt: "Logo Java" },
+        { src: "assets/photos/icone/icone_boostrap.webp", alt: "Logo Boostrap" },
+        { src: "assets/photos/icone/icone_flutter.webp", alt: "Logo Flutter" },
+        { src: "assets/photos/icone/icone_swift.webp", alt: "Logo Swift" },
+        { src: "assets/photos/icone/icone_swiftui.webp", alt: "Logo SwiftUI" },
     ];
 
     const scrollRef = useRef(null);

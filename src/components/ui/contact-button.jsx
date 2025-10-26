@@ -7,11 +7,17 @@ export function ContactBtn() {
     }
 
     return (
-        <span class="fancy">
-            <span class="top-key"></span>
-            <a href="#Contact" onClick={(e) => { e.preventDefault(); makeEmail(); }}><span class="text">me contacter</span></a>
-            <span class="bottom-key-1"></span>
-            <span class="bottom-key-2"></span>
+        <span className="fancy">
+            <span className="top-key"></span>
+            <a
+                href="#Contact"
+                onClick={(e) => { e.preventDefault(); makeEmail(); }}
+                aria-label="Envoyer un email pour me contacter"
+            >
+                <span className="text">me contacter</span>
+            </a>
+            <span className="bottom-key-1"></span>
+            <span className="bottom-key-2"></span>
         </span>
     )
 }
