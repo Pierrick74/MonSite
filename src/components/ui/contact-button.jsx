@@ -1,20 +1,15 @@
 
 export function ContactBtn() {
-    const makeEmail = () => {
-        const coded = 'cGllcnJpY2t2aXJldEBnbWFpbC5jb20=' // base64
-        const email = atob(coded)
-        window.location.href = `mailto:${email}`
-    }
-
     return (
         <span className="fancy">
             <span className="top-key"></span>
             <a
-                href="#Contact"
-                onClick={(e) => { e.preventDefault(); makeEmail(); }}
-                aria-label="Envoyer un email pour me contacter"
+                href="https://github.com/Pierrick74"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Voir mes projets"
             >
-                <span className="text">me contacter</span>
+                <span className="text"> Voir mes projets</span>
             </a>
             <span className="bottom-key-1"></span>
             <span className="bottom-key-2"></span>

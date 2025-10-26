@@ -68,7 +68,7 @@ export function SectionProjet() {
     return (
         <section id="projects" className="h-full items-center section-spacing">
             <h2 className="section-title ">Projects</h2>
-            <p className="text-justify mx-6 pt-2 pb-4 lg:text-lg 2xl:text-xl xl:my-5 text-zinc-500 font-normal tracking-normal leading-relaxed">Voici quelques exemples de réalisations, retrouvez-en plus sur mon GitHub</p>
+            <p className="text-body text-justify mx-6 pt-2 pb-4 xl:my-5 text-zinc-500 font-normal">Voici quelques exemples de réalisations, retrouvez-en plus sur mon GitHub</p>
             <div className="flex justify-center">
                 <div className="mx-6 xl:mx-20 xl:max-w-4xl xl:w-full">
                     <Tabs value={activeTab} onValueChange={setActiveTab} className=" bg-[#F5F5F7] p-3 xl:p-8 rounded-xl border">

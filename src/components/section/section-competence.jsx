@@ -26,11 +26,11 @@ export function SectionCompetence() {
             <SlideLogo />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-8 py-24 max-w-7xl mx-auto">
                 {competences.map((comp, index) => (
-                    <div key={index} className="flex flex-col gap-4 bg-[#FFF] rounded-xl p-4 shadow-sm border rounded-xl">
-                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight text-black">
+                    <div key={index} className="flex flex-col gap-4 bg-[#FFF] rounded-xl p-4 shadow-sm border">
+                        <h3 className="heading-card text-black">
                             {comp.titre}
                         </h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                        <p className="text-body-large text-gray-600">
                             {comp.technologies.map((tech, i) => (
                                 <span key={i}>
                                     {tech}
@@ -38,7 +38,7 @@ export function SectionCompetence() {
                                 </span>
                             ))}
                         </p>
-                        <p className="text-base md:text-lg text-gray-500 leading-relaxed">
+                        <p className="text-body text-gray-500">
                             {comp.contexte}
                         </p>
                     </div>

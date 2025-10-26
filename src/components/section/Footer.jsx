@@ -39,7 +39,7 @@ export function Footer() {
                     Email
                 </a>
             </div>
-            <p className="text-center mb-5">Copyright @2025 | Designed by Pierrick VIRET</p>
+            <p className="text-body text-center mb-5">Copyright @2025 | Designed by Pierrick VIRET</p>
         </footer>
     )
 }
