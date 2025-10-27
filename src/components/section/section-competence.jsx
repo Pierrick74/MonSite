@@ -9,18 +9,18 @@ const competences = [
     {
         titre: "Mobile",
         technologies: ["Swift", "SwiftUI"],
-        contexte: "Application publiée sur l’App Store",
+        contexte: "Application App Store • Projets de formation",
     },
     {
         titre: "Backend",
         technologies: ["Java", "SQL"],
-        contexte: "2 projets • intégration de bases SQL dans des projets Java",
+        contexte: "2 projets • Intégration bases de données",
     },
 ]
 
 export function SectionCompetence() {
     return (
-        <section id="Competences" className="h-full items-center section-spacing bg-[#F5F5F7]">
+        <section id="Competences" className="min-h-screen   items-center section-spacing bg-[#F5F5F7]">
             <h2 className="section-title-competence">Compétences</h2>
 
             <SlideLogo />
