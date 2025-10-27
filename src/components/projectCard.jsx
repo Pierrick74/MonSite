@@ -11,7 +11,7 @@ export function ProjectCard({ project }) {
 
     return (
         <div className="flex justify-center xl:w-3/5">
-            <li className="project-card-base bg-background">
+            <div className="project-card-base bg-background">
                 <img src={project.imagePath} className="project-image" alt={project.imageAlt} loading="lazy" />
                 <div className="flex justify-between items-start gap-2">
                     <h3 className="heading-card text-black">{project.title}</h3>
@@ -68,7 +68,7 @@ export function ProjectCard({ project }) {
                         </div>
                     </div>
                 </div>
-            </li>
+            </div>
         </div>
     )
 }
