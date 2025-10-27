@@ -20,9 +20,8 @@ const competences = [
 
 export function SectionCompetence() {
     return (
-        <section id="Competences" className="min-h-screen   items-center section-spacing bg-[#F5F5F7]">
+        <section id="Competences" className="min-h-screen items-center section-spacing bg-[#F5F5F7]">
             <h2 className="section-title-competence">Compétences</h2>
-
             <SlideLogo />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-8 py-24 max-w-7xl mx-auto">
                 {competences.map((comp, index) => (
