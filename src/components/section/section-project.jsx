@@ -7,50 +7,53 @@ const PROJECTS = [
         id: 1,
         title: "Site Internet",
         subtitle: "New",
-        text: "Portefolio: Création de ce site en REACT / Tailwind CSS.",
+        text: "Ce site personnel créé en HTML5, CSS3 et Tailwind CSS. Design épuré et minimaliste pour mettre en avant mes compétences et projets sans distraction.",
         imagePath: "assets/photos/site.webp",
         imageAlt: "Image de mon site actuellement",
         technologies: ["React", "Tailwind CSS"],
         overlayTitle: "Portfolio Personnel",
         overlayText: "Portfolio conçu avec un design minimaliste inspiré d'Apple pour présenter mes projets et compétences en développement web.",
-        overlayInfo: ["Responsive design (Tailwind CSS)",
-            "Interface utilisateur épurée et intuitive",
-            "Animations CSS pour une meilleure expérience",
-            "Structure sémantique SEO-friendly"]
+        overlayInfo: ["- Design inspiré des principes Apple (whitespace, typographie)",
+            "- Responsive design (mobile, tablet, desktop)",
+            "- Navigation fluide et intuitive",
+            "- Structure sémantique SEO-friendly"],
+        lien: "https://github.com/Pierrick74/MonSite"
 
     },
     {
         id: 2,
-        title: "Application Mobile",
+        title: "MARMOTMONITOR (Mobile)",
         subtitle: "JAN 2025",
-        text: "MarmotMonitor: gestion des premiers jours d'un enfant.",
+        text: "App iOS pour les nouveaux parents. Suivi santé, sommeil et alimentation de bébé",
         imagePath: "assets/photos/marmotMonitorApp.webp",
         imageAlt: "Image de MarmotMonitor",
-        technologies: ["SwiftUI"],
+        technologies: ["SwiftUI", "iOS"],
         overlayTitle: "MarmotMonitor",
-        overlayText: "Application iOS pour aider les nouveaux parents à suivre et gérer les soins quotidiens de leur nouveau-né.",
-        overlayInfo: ["Suivi des repas, du sommeil et des changes",
-            "Graphiques d'évolution du poids et de la taille",
-            "Tableau de bord journalier avec synthèse des activités",
-            "Interface intuitive et adaptée à l'usage quotidien"
-        ]
+        overlayText: "Application iOS native conçue pour aider les nouveaux parents à suivre et gérer les premiers jours de leur enfant de manière simple et intuitive.",
+        overlayInfo: ["- Suivi des repas, du sommeil et des changes",
+            "- Graphiques d'évolution du poids et de la taille",
+            "- Tableau de bord journalier avec synthèse des activités",
+            "- Interface intuitive et adaptée à l'usage quotidien"
+        ],
+        lien: "https://github.com/Pierrick74/MarmotMonitor"
     },
     {
         id: 3,
-        title: "Jeu d'Aventure Java",
+        title: "JAVAQUEST (Java)",
         subtitle: "JUIN 2025",
-        text: "JavaQuest: jeu d'aventure développé en Java avec JavaFX",
+        text: "Jeu d'aventure immersif en Java. Combats, inventaire et progression",
         imagePath: "assets/photos/javaquest.webp",
         imageAlt: "Image de JavaQuest",
-        technologies: ["Java"],
+        technologies: ["Java 17", "JavaFX", "H2 Database"],
         overlayTitle: "JavaQuest",
-        overlayText: "Jeu d'aventure développé en Java durant ma formation au Campus Numérique in the Alps. Le joueur incarne un guerrier (Warrior ou Wizard) qui doit atteindre le coffre aux trésors en affrontant des créatures ennemies et en récupérant des équipements.",
-        overlayInfo: ["Choix de classe de personnage avec capacités uniques",
-            "Système de combat contre dragons, gobelins et orcs",
-            "Gestion d'inventaire et d'équipements",
-            "Sauvegarde de progression via base de données H2",
-            "Technologies : Java 17, JavaFX 21, Maven"
+        overlayText: "eu d'aventure développé en Java durant ma formation  au Campus Numérique in the Alps. Le joueur incarne un guerrier (Warrior ou Wizard) qui doit atteindre le coffre aux trésors en affrontant créatures ennemies et en récupérant des équipements.",
+        overlayInfo: ["- Choix de classe de personnage avec capacités uniques",
+            "- Système de combat contre dragons, gobelins et orcs",
+            "- Gestion d'inventaire et d'équipements",
+            "- Sauvegarde de progression via base de données H2",
+            "- Interface Journal de Combat rétro et immersive"
         ],
+        lien: "https://github.com/Pierrick74/JAVAQUEST"
     }
 ]
 
@@ -71,8 +74,8 @@ export function SectionProjet() {
             <p className="text-body text-justify mx-6 pt-2 pb-4 xl:my-5 text-zinc-500 font-normal">Voici quelques exemples de réalisations, retrouvez-en plus sur mon GitHub</p>
             <div className="flex justify-center">
                 <div className="mx-6 xl:mx-20 xl:max-w-4xl xl:w-full">
-                    <Tabs value={activeTab} onValueChange={setActiveTab} className=" bg-[#F5F5F7] p-3 xl:p-8 rounded-xl border">
-                        <TabsList className="grid grid-cols-3 gap-2">
+                    <Tabs value={activeTab} onValueChange={setActiveTab} className=" bg-background p-3 xl:p-8 rounded-xl">
+                        <TabsList className="grid grid-cols-3 gap-2 bg-transparent p-0">
                             <TabsTrigger value="web" className=" project-tabs-trigger" >Web</TabsTrigger>
                             <TabsTrigger value="mobile" className="project-tabs-trigger">Mobile</TabsTrigger>
                             <TabsTrigger value="java" className=" project-tabs-trigger">Java</TabsTrigger>

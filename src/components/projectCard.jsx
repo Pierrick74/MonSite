@@ -11,47 +11,40 @@ export function ProjectCard({ project }) {
 
     return (
         <div className="flex justify-center xl:w-3/5">
-            <li className="project-card-base ">
+            <li className="project-card-base bg-background">
                 <img src={project.imagePath} className="project-image" alt={project.imageAlt} loading="lazy" />
-                <h3 className="heading-card text-black">{project.title}</h3>
-                <p className="text-body text-gray-500">{project.subtitle}</p>
-                <p className="text-body-large text-gray-600 pb-3">{project.text}</p>
-                <div className="flex justify-between items-center">
-                    <div className="mt-2 flex flex-wrap gap-2">
-                        {project.technologies.map((tech, index) => (
-                            <p
-                                key={index}
-                                className="parcours-badge"
-                            >
-                                {tech}
-                            </p>
-                        ))}
-
-                    </div>
+                <div className="flex justify-between items-start gap-2">
+                    <h3 className="heading-card text-black">{project.title}</h3>
                     <button
-                        className="rounded-full bg-[#0071e3] w-10 h-10 text-white transition-all hover:scale-105 flex-shrink-0 flex items-center justify-center p-0 border-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
+                        className="text-[#0071e3] hover:underline font-medium text-body flex items-center gap-1 flex-shrink-0 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071e3] focus-visible:ring-offset-2 rounded px-2 py-1"
                         onClick={toggleDetail}
                         aria-label={isShowDetail ? "Masquer les détails du projet" : "Afficher les détails du projet"}
                         aria-expanded={isShowDetail}
                     >
+                        <span>Voir plus</span>
                         <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 20 20"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            className="transition-transform duration-200"
+                            className={`transition-transform duration-200 ${isShowDetail ? 'rotate-180' : ''}`}
                         >
-                            {isShowDetail ? (
-                                <line x1="4" y1="10" x2="16" y2="10" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                            ) : (
-                                <>
-                                    <line x1="10" y1="4" x2="10" y2="16" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                                    <line x1="4" y1="10" x2="16" y2="10" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                                </>
-                            )}
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </button>
+                </div>
+                <p className="text-body text-gray-500">{project.subtitle}</p>
+                <p className="text-body-large text-gray-600 pb-3">{project.text}</p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                    {project.technologies.map((tech, index) => (
+                        <p
+                            key={index}
+                            className="parcours-badge"
+                        >
+                            {tech}
+                        </p>
+                    ))}
                 </div>
 
                 <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isShowDetail ? 'max-h-[800px] opacity-100 mt-5' : 'max-h-0 opacity-0'}`}>
@@ -63,6 +56,16 @@ export function ProjectCard({ project }) {
                                 <li key={index}>{info}</li>
                             ))}
                         </ul>
+                        <div className="flex justify-end">
+                            <a
+                                href={project.lien}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#0071e3] hover:underline font-medium text-body-large"
+                            >
+                                GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
             </li>
