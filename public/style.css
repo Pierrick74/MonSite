@@ -133,7 +133,7 @@ body {
 }
 
 .parcours-badge {
-  @apply mx-1 rounded-2xl bg-zinc-950 px-3 py-1 text-center text-zinc-50;
+  @apply mx-1 rounded-2xl border border-[#0071e3] bg-transparent px-3 py-1 text-center text-primary;
 }
 
 .contact-btn {
@@ -187,7 +187,7 @@ body {
 }
 
 .timeline-description {
-  @apply text-base leading-relaxed font-normal tracking-normal lg:text-lg xl:text-lg 2xl:text-xl;
+  @apply text-base my-5 leading-relaxed font-normal tracking-normal lg:text-lg xl:text-lg 2xl:text-xl;
 }
 
 /* Classes d'animation avec @apply */
