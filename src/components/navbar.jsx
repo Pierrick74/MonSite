@@ -26,12 +26,12 @@ export function Navbar() {
     ];
 
     return (
-        <nav className="">
+        <nav className="" role="navigation" aria-label="Navigation principale">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo / Nom */}
                     <div className="flex-shrink-0">
-                        <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 hidden md:flex ">
+                        <h2 className="heading-card text-gray-900 hidden md:flex ">
                             Pierrick VIRET
                         </h2>
                     </div>
@@ -42,7 +42,7 @@ export function Navbar() {
                             <button
                                 key={item.id}
                                 onClick={() => scrollToSection(item.id)}
-                                className="text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors duration-200 px-3 py-2 text-lg lg:text-xl xl:text-2xl font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 focus-visible:rounded-md"
+                                className="text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors duration-200 px-3 py-2 heading-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 focus-visible:rounded-md"
                             >
                                 {item.label}
                             </button>

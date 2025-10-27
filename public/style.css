@@ -1,11 +1,59 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-background: rgb(250 250 253); /* #fafafd */
+  --color-section: rgb(245 245 247); /* #f5f5f7 */
+  --color-primary: rgb(17 17 17); /* #111111 */
+  --color-secondary: rgb(102 102 102); /* #666666 */
+  --color-muted: rgb(153 153 153); /* #999999 */
+  --color-accent: rgb(0 113 227); /* #0071e3 */
+  --color-accent-dark: rgb(0 96 201); /* #0060c9 */
+  --color-accent-light: rgb(231 241 255); /* #e7f1ff */
+  --color-border: rgb(229 229 231); /* #e5e5e7 */
+}
+
+body {
+  background: theme(colors.background);
+  font-family:
+    SF Pro Display,
+    SF Pro Icons,
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+/* Typography System */
+.heading-hero {
+  @apply text-3xl md:text-4xl lg:text-5xl tracking-tight leading-tight font-bold;
+}
+
+.heading-section {
+  @apply text-xl lg:text-4xl xl:text-5xl tracking-tight leading-tight font-bold;
+}
+
+.heading-card {
+  @apply text-xl md:text-2xl lg:text-3xl tracking-tight leading-tight font-bold;
+}
+
+.text-body {
+  @apply text-base md:text-lg leading-relaxed;
+}
+
+.text-body-large {
+  @apply text-lg md:text-xl leading-relaxed;
+}
+
+.text-label {
+  @apply text-xs md:text-sm font-medium tracking-normal;
+}
+
 .nav-link {
   @apply text-lg text-zinc-300 md:text-zinc-900 xl:text-xl;
 }
 
 .project-tabs-trigger {
-  @apply bg-[#FFF] text-center text-xl leading-tight tracking-tight text-black data-[state=active]:scale-110 data-[state=active]:border-b-2 data-[state=active]:border-black data-[state=active]:bg-[#F5F5F7] data-[state=active]:font-bold md:text-xl lg:text-2xl;
+  @apply border border-black bg-[#F5F5F7] text-center text-base leading-tight tracking-tight text-black data-[state=active]:scale-110 data-[state=active]:border-b-2 data-[state=active]:border-black data-[state=active]:font-bold md:text-xl lg:text-2xl;
 }
 
 .project-card-content {
@@ -41,19 +89,19 @@
 }
 
 .card-overlay {
-  @apply my-5 flex flex-col rounded-2xl bg-black/90 p-6 text-white;
+  @apply my-5 flex flex-col rounded-2xl bg-section p-6 text-white;
 }
 
 .project-overlay-title {
-  @apply my-4 text-justify text-xl 2xl:text-2xl;
+  @apply my-4 text-justify text-xl 2xl:text-2xl text-primary;
 }
 
 .project-overlay-text {
-  @apply my-4 text-justify text-lg font-bold text-zinc-400 2xl:text-xl;
+  @apply my-4 text-justify text-lg font-bold text-[#666666] 2xl:text-xl;
 }
 
 .project-overlay-features {
-  @apply list-disc px-5 text-justify text-lg 2xl:text-xl;
+  @apply list-none px-5 text-justify text-lg 2xl:text-xl text-[#333333];
 }
 
 .section-spacing {
@@ -85,22 +133,11 @@
 }
 
 .parcours-badge {
-  @apply mx-1 rounded-2xl bg-zinc-950 px-3 py-1 text-center text-zinc-50;
+  @apply mx-1 rounded-2xl border border-[#0071e3] bg-transparent px-3 py-1 text-center text-primary;
 }
 
 .contact-btn {
   @apply m-1 w-40 rounded-xl border border-zinc-900 px-4 py-1 text-center hover:bg-zinc-900 hover:text-zinc-50 focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 focus-visible:outline-none;
-}
-
-body {
-  background: #fafafd;
-  font-family:
-    SF Pro Display,
-    SF Pro Icons,
-    Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
 }
 
 /* Liste de la timeline */
@@ -126,7 +163,7 @@ body {
 
 /* Marqueurs (cercles) sur la ligne */
 .timeline-marker {
-  @apply absolute top-1.5 -left-13 z-10 h-4 w-4 rounded-full bg-gray-800;
+  @apply absolute top-1.5 -left-13 z-10 h-4 w-4 rounded-full bg-[#0071e3];
 }
 
 /* Style pour le contenu de chaque item */
@@ -150,7 +187,7 @@ body {
 }
 
 .timeline-description {
-  @apply text-base leading-relaxed font-normal tracking-normal lg:text-lg xl:text-lg 2xl:text-xl;
+  @apply text-base my-5 leading-relaxed font-normal tracking-normal lg:text-lg xl:text-lg 2xl:text-xl;
 }
 
 /* Classes d'animation avec @apply */
@@ -213,7 +250,7 @@ body {
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: #0071e3;
 }
 
 .fancy .top-key {
@@ -254,7 +291,7 @@ body {
 
 .fancy:hover {
   color: white;
-  background: black;
+  background: #0071e3;
 }
 
 .fancy:hover::before {
@@ -286,7 +323,7 @@ body {
 }
 
 .fancy:has(a:focus-visible) {
-  background: black;
+  background: #0071e3;
   color: white;
 }
 

@@ -5,8 +5,8 @@ const parcoursData = [
         date: "2024 - Présent",
         metier: "Développeur Web Full Stack",
         entreprise: "Campus Numérique in the Alps",
-        description: "Formation et développement de compétences en HTML5, CSS3, JavaScript et JAVA.",
-        skills: ["HTML5", "CSS3", "Javascript", "Tailwind CSS", "React"]
+        description: "Formation full-stack moderne",
+        skills: ["HTML5", "CSS3", "Javascript", "Tailwind CSS", "React", "Java", "PHP"]
     },
     {
         date: "2023 - 2024",
