@@ -2,6 +2,8 @@
 
 Portfolio personnel de Pierrick VIRET, développeur web et mobile spécialisé en HTML/CSS, JavaScript, React et Swift.
 
+<p align="center"><img src="public/assets/photos/site.webp" height="400"> </p>
+
 ## À propos
 
 Site portfolio présentant mes projets, compétences et parcours professionnel. Développeur iOS et web, ancien militaire reconverti dans le développement.
